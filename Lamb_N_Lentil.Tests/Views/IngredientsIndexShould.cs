@@ -16,6 +16,8 @@ namespace Lamb_N_Lentil.Tests.Views
         [TestMethod]
         public void UseDomainUsdaInformation() => HaveCorrectText("@using Lamb_N_Lentil.Domain.UsdaInformation");
 
+        [TestMethod]
+        public void UseDataAnnotations() => HaveCorrectText("@using System.ComponentModel.DataAnnotations");
 
         [TestMethod]
         public void HaveCorrectSearchForm() => HaveCorrectText("@using (Html.BeginForm(\"ShowResults\", UIType.Ingredients.ToString(), new { Controller = UIType.Ingredients.ToString(), searchText = \"searchText\" }))");
@@ -31,9 +33,9 @@ namespace Lamb_N_Lentil.Tests.Views
         [TestMethod]
         public void HaveCorrectTextBoxToSearchForIngredients()
         {
-            string testString = " @Html.TextBox(\"searchText\",\"\",   new { @class = \"ingredientTextBox\", placeholder = \"Enter Description of What You are Looking For Here\", maxlength = \"43\", length=\"43\" })";
-            // @Html.TextBox("searchText","",   new { @class = "ingredientTextBox", placeholder = "Enter Description of What You are Looking For Here", maxlength = "43", length="43" })
+            string testString = "@Html.TextBox";// (\"searchText\",\"\",   new { @class = \"ingredientTextBox\", placeholder = \"Enter Description of What You are Looking For\", maxlength = \"43\", length=\"43\" })"; 
             HaveCorrectText(testString);
+            //   @Html.TextBox("searchText", "", new { @class = "ingredientTextBox", placeholder = "Enter Description of What You are Looking For", maxlength = "43", length = "43" })
         }
 
         [TestMethod]

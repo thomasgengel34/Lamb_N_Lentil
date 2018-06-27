@@ -7,34 +7,81 @@ namespace Lamb_N_Lentil.Tests.Content
     [TestClass]
     public class SiteCssFileShould : BaseViewTests
     { 
-        static string testFileContents = @"body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    background: linear-gradient(90deg,rgba(250,207,78,0) 12%, transparent 0, transparent 99%, #dca 0);
-    background-size: 100px 100px;
+        static string testFileContents = @"html {
+    width: 100%;
+    margin-left: 0;
+}
+
+body {
+    width: 100%;
+    margin-left: 0;
     font-family: 'Lucida Handwriting';
     color: green;
+    background: linear-gradient(90deg,rgba(250,207,78,0) 12%, transparent 0, transparent 99%, #dca 0);
+}
+
+#HomeAbout, #IngredientsIndex, #IngredientsDetails {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-size: 100px 100px;
     margin: 0;
     border-width: 0;
-}
-
-.container .body-content {
     margin-bottom: 0;
-    padding-bottom: 0;
     min-height: 80vh;
+    width: 90%;
+    padding-left:5%;
 }
 
-.jumbotron {
+#HomeIndex {
+    background-color: lightgoldenrodyellow;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: none;
+}
+
+    #HomeIndex h1 {
+        padding-top: 250px;
+        background-color: lightgoldenrodyellow;
+        margin-left: 0;
+        font-size: 1200%;
+        padding-bottom: 25%;
+        margin-left: -9%;
+        padding-left: 10%;
+    }
+
+    #HomeAbout li{
+        font-size:125%;
+    }
+
+#IngredientsIndex {
+    min-height: inherit; 
+}
+
+    #IngredientsIndex h1, #IngredientsDetails h1 {
+        padding-top: -10%;
+    }
+
+    p{
+        font-size:125%;
+    }
+
+ p a{
+        color:blue;
+        font-weight:500;
+       text-decoration:underline;
+    }
+
+footer {
+    border: inset green 5px;
     background-color: white;
+    margin-left: -25%;
+    margin-right: -25%;
+    padding: 1%;
+    text-align: center;
 }
 
-.jumbotron~p { 
-    padding-top:18px;
-}
-
-#footer p{
-    padding-top:20px;
-}
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -82,7 +129,11 @@ h1, h2, h3, h4, h5, h6, table, a {
     background-color: rgba(250,207,78,0);
     color: green;
 }
- 
+
+h1 {
+    margin-top: 0px;
+}
+
 a {
     text-decoration: underline;
 }
@@ -96,11 +147,13 @@ a {
 }
 
 .container.body-content {
-    padding-left: 100px;
+    padding-left: 6%;
     background-color: lightgoldenrodyellow;
     background-image: linear-gradient(90deg, transparent 79px, pink 79px, pink 80px, transparent 81px), linear-gradient(#eee .1em, transparent .4em);
     background-size: 100% 2.4em;
     min-height: 90vh;
+    margin-left: 10%;
+    margin-right: 5%;
 }
 
 h1 {
@@ -118,8 +171,7 @@ p {
 
 #IngredientsIndexTable {
     background-color: white;
-    
-} 
+}
 
 tr td:first-of-type {
     width: 40%;
@@ -149,7 +201,7 @@ h2.no_results {
 
 #IngredientsIndexTable tr th:last-child, #IngredientsIndexTable tr td:last-child {
     width: 5%;
-    background-color:white;
+    background-color: white;
 }
 
 /* Nutrition Label - begin*/
@@ -177,7 +229,7 @@ h2.no_results {
         margin-top: 0;
         border-top: 0;
     }
-     
+
 
     #NutritionLabel .thickHR {
         height: 25px;
@@ -204,33 +256,34 @@ h2.no_results {
         margin: 0;
         clear: both;
     }
-     
+
 
     #NutritionLabel > div {
         width: 100%;
     }
-     
-#NutritionLabel h1, #NutritionLabel h2, #NutritionLabel p {
-    background: white;
-    padding: 1%;
-    font-family: Arial;
-    color: black;
-}
 
-#NutritionLabel .bold {
-    font-weight: 800;
-}
+    #NutritionLabel h1, #NutritionLabel h2, #NutritionLabel p {
+        background: white;
+        padding: 1%;
+        font-family: Arial;
+        color: black;
+    }
 
-#NutritionLabel .indented {
-    padding-left: 5%;
-}
- 
+    #NutritionLabel .bold {
+        font-weight: 800;
+    }
 
-#NutritionLabel .right {
-    display: block;
-    float: right;
-} 
-/* Nutrition Label - end*/";
+    #NutritionLabel .indented {
+        padding-left: 5%;
+    }
+
+
+    #NutritionLabel .right {
+        display: block;
+        float: right;
+    }
+/* Nutrition Label - end*/
+";
 
 
 private static string filePath = @"C:\Dev\TGE\Lamb_N_Lentil\Lamb_N_Lentil\Content\Site.css";

@@ -13,7 +13,7 @@ namespace Lamb_N_Lentil.Tests.Views
 
         internal void HaveCorrectText(string text)
         {
-            HaveCorrectText("\n" + text, text);
+            HaveCorrectText(  text, text);
         }
 
         internal void HaveCorrectText(string lineBeginning, string textOfInterest, int lineNumber = -1)
@@ -23,7 +23,7 @@ namespace Lamb_N_Lentil.Tests.Views
             int i = 0;
             foreach (string line in linesCompressed)
             {
-                if (line.StartsWith(lineBeginning))
+                if (line.Contains(lineBeginning))
                 {
                  //    textOfInterest = "Look up ingredients on :<a href=\"https://ndb.nal.usda.gov/ndb\" target=\"_blank\">the USDA nutritional site</a>";
                     if (lines[i].Contains(textOfInterest))

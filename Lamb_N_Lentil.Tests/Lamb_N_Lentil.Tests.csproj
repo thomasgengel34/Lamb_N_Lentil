@@ -155,7 +155,6 @@
     <Compile Include="ViewModelTest\IngredientDetailViewModelDisplayNamesShouldBeOn.cs" />
     <Compile Include="Views\BaseViewTests.cs" />
     <Compile Include="Views\HomeAboutViewShould .cs" />
-    <Compile Include="Views\HomeContactViewShould.cs" />
     <Compile Include="Views\HomeIndexViewShould.cs" />
     <Compile Include="Views\SharedViewShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
