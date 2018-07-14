@@ -1,10 +1,10 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 
-namespace Lamb_N_Lentil.Domain
+namespace Lamb_N_Lentil.Domain.UsdaInformation
 {
     public class Entity : IIngredient, INotifyPropertyChanged
     {
-        private decimal _CaloriesFromFat;
         private decimal _TotalFat;
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -38,7 +38,7 @@ namespace Lamb_N_Lentil.Domain
         public decimal Niacin { get; set; }
         public decimal Magnesium { get; set; }
 
-        string IIngredient.Label { get; set; }
+        string  Label { get; set; }
         decimal IIngredient.Eqv { get; set; }
         string IIngredient.ManufacturerOrFoodGroup { get; set; }
 
@@ -55,22 +55,19 @@ namespace Lamb_N_Lentil.Domain
         }
         public decimal CaloriesFromFat
         {
-            get { return _CaloriesFromFat; }
-            set { _CaloriesFromFat = value; }
+            get { return CaloriesFromFat1; }
+            set { CaloriesFromFat1 = value; }
         }
 
         public decimal MonounsaturatedFat { get; set; }
         public decimal PolyunsaturatedFat { get; set; }
 
-        public Entity()
-        {
-            _CaloriesFromFat = 9 * _TotalFat;
-        }
+        public Entity() =>  CaloriesFromFat1 = 9 * _TotalFat; 
 
         protected void OnPropertyChanged(string name)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-            _CaloriesFromFat = 9 * _TotalFat;
+            CaloriesFromFat1 = 9 * _TotalFat;
         }
 
         public string TotalFatUnit { get; set; }
@@ -96,5 +93,16 @@ namespace Lamb_N_Lentil.Domain
         public string VitaminDUnit { get; set; }
         public string VitaminB12Unit { get; set; }
         public string VitaminB6Unit { get; set; }
+        public decimal CaloriesFromFat1 { get => CaloriesFromFat2; set => CaloriesFromFat2 = value; }
+        public decimal CaloriesFromFat2 { get; set; }
+        string IIngredient.Name { get; set; }
+        string IIngredient.IngredientDescription { get; set; }
+        List<Nutrient> IIngredient.Nutrients { get; set; }
+        List<string> IIngredient.Footnotes { get; set; }
+        int IEntity.ID { get; set; }
+        string IEntity.InstanceName { get; set; }
+        string IEntity.IngredientsInIngredient { get; set; }
+        string IEntity.Description { get; set; }
+        string IEntity.UpdateDate { get; set; }
     }
 }

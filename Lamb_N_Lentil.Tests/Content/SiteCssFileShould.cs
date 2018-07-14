@@ -20,7 +20,7 @@ body {
     background: linear-gradient(90deg,rgba(250,207,78,0) 12%, transparent 0, transparent 99%, #dca 0);
 }
 
-#HomeAbout, #IngredientsIndex, #IngredientsDetails {
+#HomeAbout, #IngredientsIndex, .IngredientsDetails {
     padding-top: 50px;
     padding-bottom: 20px;
     background-size: 100px 100px;
@@ -289,15 +289,9 @@ h2.no_results {
 private static string filePath = @"C:\Dev\TGE\Lamb_N_Lentil\Lamb_N_Lentil\Content\Site.css";
                                            
 
-        public SiteCssFileShould()
-        {
-            ObtainFileAsString(filePath);
-        }
+        public SiteCssFileShould() => ObtainFileAsString(filePath); 
 
         [TestMethod]
-        public void LookLikeThis()
-        { 
-          Assert.AreEqual(testFileContents,fileContents); 
-        } 
+        public void LookLikeThis() =>  Assert.AreEqual(testFileContents,fileContents);  
     }
 } 

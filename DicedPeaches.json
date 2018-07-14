@@ -1,0 +1,414 @@
+{
+    "list": {
+        "q": "DICED PEACHES, UPC: 078742212050",
+        "sr": "Legacy",
+        "ds": "any",
+        "start": 0,
+        "end": 50,
+        "total": 108,
+        "group": "",
+        "sort": "r",
+        "item": [
+          {
+            "offset": 0,
+            "group": "Branded Food Products Database",
+            "name": "DICED PEACHES, UPC: 078742212050",
+            "ndbno": "45032698",
+            "ds": "LI",
+            "manu": "WAL-MART STORES, INC."
+          },
+            {
+                "offset": 1,
+                "group": "Branded Food Products Database",
+                "name": "MEIJER, ORGANICS, DICED YELLOW CLING PEACHES AND DICED PEARS IN ORGANIC PEAR JUICE FROM CONCENTRATE, UPC: 886926012200",
+                "ndbno": "45035638",
+                "ds": "LI",
+                "manu": "Meijer, Inc."
+            },
+            {
+                "offset": 2,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES & PEARS, YELLOW CLING PEACHES & BARTLETT PEARS IN ORGANIC PEAR JUICE FROM CONCENTRATE, UPC: 036800285040",
+                "ndbno": "45097553",
+                "ds": "LI",
+                "manu": "Topco Associates, Inc."
+            },
+            {
+                "offset": 3,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES YELLOW CLING PEACHES IN NATURALLY FLAVORED 100% FRUIT JUICE, UPC: 036800439160",
+                "ndbno": "45356637",
+                "ds": "LI",
+                "manu": "Topco Associates, Inc."
+            },
+            {
+                "offset": 4,
+                "group": "Branded Food Products Database",
+                "name": "DICED YELLOW CLING PEACHES IN NATURAL PEACH FLAVORED LIGHT SYRUP, UPC: 075450003239",
+                "ndbno": "45198156",
+                "ds": "LI",
+                "manu": "Hy-Vee, Inc."
+            },
+            {
+                "offset": 5,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES, YELLOW CLING PEACHES, IN WATER, UPC: 036800001831",
+                "ndbno": "45265781",
+                "ds": "LI",
+                "manu": "Topco Associates, Inc."
+            },
+            {
+                "offset": 6,
+                "group": "Branded Food Products Database",
+                "name": "ESSENTIAL EVERYDAY, DICED PEACHES, PEACH, UPC: 041303010464",
+                "ndbno": "45097535",
+                "ds": "LI",
+                "manu": "Supervalu, Inc."
+            },
+            {
+                "offset": 7,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES YELLOW CLING PEACHES IN LIGHT SYRUP, UPC: 036800063815",
+                "ndbno": "45012443",
+                "ds": "LI",
+                "manu": "Topco Associates, Inc."
+            },
+            {
+                "offset": 8,
+                "group": "Branded Food Products Database",
+                "name": "KEY FOOD, YELLOW CLING DICED PEACHES IN NATURALLY PEACH FLAVORED LIGHT SYRUP, UPC: 073296243215",
+                "ndbno": "45029687",
+                "ds": "LI",
+                "manu": "Key Food Stores Co-Operative, Inc."
+            },
+            {
+                "offset": 9,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES YELLOW CLING PEACHES IN LIGHT SYRUP, UPC: 490711801148",
+                "ndbno": "45288561",
+                "ds": "LI",
+                "manu": "MARKET PANTRY"
+            },
+            {
+                "offset": 10,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES YELLOW CLING PEACHES GEL, UPC: 024000051978",
+                "ndbno": "45079491",
+                "ds": "LI",
+                "manu": "Del Monte Foods Inc."
+            },
+            {
+                "offset": 11,
+                "group": "Branded Food Products Database",
+                "name": "YELLOW CLING DICED PEACHES, UPC: 092825102601",
+                "ndbno": "45282665",
+                "ds": "LI",
+                "manu": "Brookshire Grocery Company"
+            },
+            {
+                "offset": 12,
+                "group": "Branded Food Products Database",
+                "name": "ORGANIC DICED PEACHES IN ORGANIC PEAR JUICE FROM CONCENTRATE, UPC: 011535505410",
+                "ndbno": "45276860",
+                "ds": "LI",
+                "manu": "Green Chemical Products Inc."
+            },
+            {
+                "offset": 13,
+                "group": "Branded Food Products Database",
+                "name": "YELLOW CLING DICED PEACHES IN SYRUP, UPC: 011110807205",
+                "ndbno": "45095641",
+                "ds": "LI",
+                "manu": "The Kroger Co."
+            },
+            {
+                "offset": 14,
+                "group": "Branded Food Products Database",
+                "name": "SPARTAN, YELLOW CLING DICED PEACHES, UPC: 011213041902",
+                "ndbno": "45100463",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 15,
+                "group": "Branded Food Products Database",
+                "name": "SNACK BOWLS YELLOW CLING DICED PEACHES IN LIGHT SYRUP, UPC: 074175227760",
+                "ndbno": "45356677",
+                "ds": "LI",
+                "manu": "Stater Bros. Markets Inc."
+            },
+            {
+                "offset": 16,
+                "group": "Branded Food Products Database",
+                "name": "SNACK BOWLS MIXED FRUIT DICED PEACHES, PEARS & PINEAPPLE IN LIGHT SYRUP WITH NATURAL FLAVORS, UPC: 074175227753",
+                "ndbno": "45356669",
+                "ds": "LI",
+                "manu": "Stater Bros. Markets Inc."
+            },
+            {
+                "offset": 17,
+                "group": "Branded Food Products Database",
+                "name": "YELLOW CLING DICED PEACHES IN LIGHT SYRUP, UPC: 018894340072",
+                "ndbno": "45282522",
+                "ds": "LI",
+                "manu": "Big Y Foods, Inc."
+            },
+            {
+                "offset": 18,
+                "group": "Branded Food Products Database",
+                "name": "MIXED FRUIT DICED PEACHES, PEARS & PINEAPPLE IN NATURALLY FLAVORED 100% FRUIT JUICE, UPC: 036800439153",
+                "ndbno": "45356641",
+                "ds": "LI",
+                "manu": "Topco Associates, Inc."
+            },
+            {
+                "offset": 19,
+                "group": "Branded Food Products Database",
+                "name": "MIXED FRUIT DICED PEACHES & PEARS WITH PINEAPPLE IN LIGHT SYRUP, UPC: 018894340065",
+                "ndbno": "45280648",
+                "ds": "LI",
+                "manu": "Big Y Foods, Inc."
+            },
+            {
+                "offset": 20,
+                "group": "Branded Food Products Database",
+                "name": "MIXED FRUIT, DICED PEACHES, PEARS & PINEAPPLE IN WATER, UPC: 036800001824",
+                "ndbno": "45356597",
+                "ds": "LI",
+                "manu": "Topco Associates, Inc."
+            },
+            {
+                "offset": 21,
+                "group": "Branded Food Products Database",
+                "name": "ORGANIC YELLOW CLING DICED PEACHES, UPC: 041190058426",
+                "ndbno": "45356912",
+                "ds": "LI",
+                "manu": "WAKEFERN FOOD CORPORATION"
+            },
+            {
+                "offset": 22,
+                "group": "Branded Food Products Database",
+                "name": "KROGER, YELLOW CLING DICED PEACHES, UPC: 011110906601",
+                "ndbno": "45095634",
+                "ds": "LI",
+                "manu": "The Kroger Co."
+            },
+            {
+                "offset": 23,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES & PEARS IN ORGANIC PEAR JUICE FROM CONCENTRATE, UPC: 021333222358",
+                "ndbno": "45286460",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 24,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES, UPC: 070038600701",
+                "ndbno": "45346666",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 25,
+                "group": "Branded Food Products Database",
+                "name": "SNACK BOWLS YELLOW CLING DICED PEACHES, UPC: 011110801890",
+                "ndbno": "45215104",
+                "ds": "LI",
+                "manu": "The Kroger Co."
+            },
+            {
+                "offset": 26,
+                "group": "Branded Food Products Database",
+                "name": "YELLOW CLING DICED PEACHES IN 100% FRUIT JUICE, UPC: 038900029708",
+                "ndbno": "45063284",
+                "ds": "LI",
+                "manu": "Dole Packaged Foods Company"
+            },
+            {
+                "offset": 27,
+                "group": "Branded Food Products Database",
+                "name": "YELLOW CLING DICED PEACHES, UPC: 038900029197",
+                "ndbno": "45079487",
+                "ds": "LI",
+                "manu": "Dole Packaged Foods Company"
+            },
+            {
+                "offset": 28,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES IN 100% FRUIT JUICE, UPC: 038900029692",
+                "ndbno": "45323973",
+                "ds": "LI",
+                "manu": "Dole Packaged Foods Company"
+            },
+            {
+                "offset": 29,
+                "group": "Branded Food Products Database",
+                "name": "OATMEAL + SWEET DICED PEACHES, CHOPPED ROASTED ALMONDS, AND MULTIGRAINS, UPC: 030000315514",
+                "ndbno": "45307665",
+                "ds": "LI",
+                "manu": "THE QUAKER OATS COMPANY"
+            },
+            {
+                "offset": 30,
+                "group": "Branded Food Products Database",
+                "name": "ORGANIC DICED PEACHES & PEARS, UPC: 070038640141",
+                "ndbno": "45197213",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 31,
+                "group": "Branded Food Products Database",
+                "name": "ORGANIC DICED YELLOW CLING PEACHES IN ORGANIC PEAR JUICE FROM CONCENTRATE, UPC: 070038640127",
+                "ndbno": "45197210",
+                "ds": "LI",
+                "manu": "none"
+            },
+            {
+                "offset": 32,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES IN 100% FRUIT JUICE, UPC: 038900741754",
+                "ndbno": "45343199",
+                "ds": "LI",
+                "manu": "Dole Packaged Foods Company"
+            },
+            {
+                "offset": 33,
+                "group": "Branded Food Products Database",
+                "name": "YELLOW CLING DICED PEACHES IN LIGHT SYRUP, UPC: 035826051219",
+                "ndbno": "45021018",
+                "ds": "LI",
+                "manu": "Food Town Stores Inc."
+            },
+            {
+                "offset": 34,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES, PEARS & CHERRIES IN NATURALLY CHERRY FLAVORED LIGHT SYRUP, UPC: 036800064607",
+                "ndbno": "45012352",
+                "ds": "LI",
+                "manu": "Topco Associates, Inc."
+            },
+            {
+                "offset": 35,
+                "group": "Branded Food Products Database",
+                "name": "YELLOW DICED PEACHES, UPC: 713733333672",
+                "ndbno": "45360122",
+                "ds": "LI",
+                "manu": "Meijer, Inc."
+            },
+            {
+                "offset": 36,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES, UPC: 052548597764",
+                "ndbno": "45326510",
+                "ds": "LI",
+                "manu": "7-Eleven, Inc."
+            },
+            {
+                "offset": 37,
+                "group": "Branded Food Products Database",
+                "name": "YELLOW CLING DICED PEACHES IN WHITE GRAPE JUICE, UPC: 078742158044",
+                "ndbno": "45326996",
+                "ds": "LI",
+                "manu": "WAL-MART STORES, INC."
+            },
+            {
+                "offset": 38,
+                "group": "Branded Food Products Database",
+                "name": "ORGAINCS YELLOW CLING DICED PEACHES IN ORGANIC PEAR JUICE FROM CONCENTRATE, UPC: 072036704481",
+                "ndbno": "45050898",
+                "ds": "LI",
+                "manu": "Harris-Teeter Inc."
+            },
+            {
+                "offset": 39,
+                "group": "Branded Food Products Database",
+                "name": "CUPS OF DICED PEACHES YELLOW CLING IN LIGHT SYRUP, UPC: 072036149930",
+                "ndbno": "45050892",
+                "ds": "LI",
+                "manu": "Harris-Teeter Inc."
+            },
+            {
+                "offset": 40,
+                "group": "Branded Food Products Database",
+                "name": "CUPS OF DICED YELLOW CLING PEACHES, UPC: 072036141187",
+                "ndbno": "45050891",
+                "ds": "LI",
+                "manu": "Harris-Teeter Inc."
+            },
+            {
+                "offset": 41,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES, UPC: 042563601942",
+                "ndbno": "45018651",
+                "ds": "LI",
+                "manu": "United Natural Foods, Inc."
+            },
+            {
+                "offset": 42,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES & PEARS, UPC: 078742236155",
+                "ndbno": "45323612",
+                "ds": "LI",
+                "manu": "WAL-MART STORES, INC."
+            },
+            {
+                "offset": 43,
+                "group": "Branded Food Products Database",
+                "name": "YELLOW CLING DICED PEACHES, UPC: 04656701426",
+                "ndbno": "45316608",
+                "ds": "LI",
+                "manu": "RALEY'S"
+            },
+            {
+                "offset": 44,
+                "group": "Branded Food Products Database",
+                "name": "YELLOW CLING DICED PEACHES IN WHITE GRAPE JUICE FROM CONCENTRATE, UPC: 607880034356",
+                "ndbno": "45292396",
+                "ds": "LI",
+                "manu": "Bruno's Supermarkets, Inc."
+            },
+            {
+                "offset": 45,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES IN 100% JUICE, UPC: 078742158020",
+                "ndbno": "45292332",
+                "ds": "LI",
+                "manu": "WAL-MART STORES, INC."
+            },
+            {
+                "offset": 46,
+                "group": "Branded Food Products Database",
+                "name": "YELLOW CLING DICED PEACHES IN LIGHT SYRUP, UPC: 041268137008",
+                "ndbno": "45195931",
+                "ds": "LI",
+                "manu": "Hannaford Bros. Co."
+            },
+            {
+                "offset": 47,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES, UPC: 041303055151",
+                "ndbno": "45196024",
+                "ds": "LI",
+                "manu": "Supervalu, Inc."
+            },
+            {
+                "offset": 48,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES IN LIGHT SYRUP, UPC: 6957884300907",
+                "ndbno": "45032657",
+                "ds": "LI",
+                "manu": "Nyanya Corporation"
+            },
+            {
+                "offset": 49,
+                "group": "Branded Food Products Database",
+                "name": "DICED PEACHES IN LIGHT SYRUP, UPC: 032637920017",
+                "ndbno": "45004096",
+                "ds": "LI",
+                "manu": "Vimpex International Corp."
+            }
+        ]
+    }
+}

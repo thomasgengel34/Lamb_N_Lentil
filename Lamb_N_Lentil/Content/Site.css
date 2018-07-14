@@ -11,7 +11,7 @@ body {
     background: linear-gradient(90deg,rgba(250,207,78,0) 12%, transparent 0, transparent 99%, #dca 0);
 }
 
-#HomeAbout, #IngredientsIndex, #IngredientsDetails {
+#HomeAbout, #IngredientsIndex, .IngredientsDetails {
     padding-top: 50px;
     padding-bottom: 20px;
     background-size: 100px 100px;

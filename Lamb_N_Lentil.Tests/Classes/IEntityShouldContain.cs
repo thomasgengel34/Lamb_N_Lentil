@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Lamb_N_Lentil.Domain;
+using Lamb_N_Lentil.Domain.UsdaInformation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lamb_N_Lentil.Tests.Classes
 {
-    [TestClass]
+  /*  [TestClass]
     public class IEntityShouldContain:Common
     { 
         public IEntityShouldContain()
@@ -68,5 +68,5 @@ namespace Lamb_N_Lentil.Tests.Classes
         [TestMethod]
         public void FolicAcid() => VerifyPropertyIsValid("FolicAcid");
 
-    } 
+    }    */
 }

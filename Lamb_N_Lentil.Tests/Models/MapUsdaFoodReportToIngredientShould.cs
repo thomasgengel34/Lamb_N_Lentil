@@ -5,8 +5,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lamb_N_Lentil.Tests.Models
 {
-    [TestClass]
-    public class MapUsdaFoodReportToIngredientShould
+    /*  [TestClass]
+  public class MapUsdaFoodReportToIngredientShould
     {
          private food food;
        readonly private string correctName = "test name";
@@ -154,54 +154,54 @@ namespace Lamb_N_Lentil.Tests.Models
             Assert.AreEqual(correctDate, ingredient.UpdateDate);
         }
 
-        [TestMethod]
-        public void ConvertCaloriesValue()
-        {
-            Assert.AreEqual(correctCalories, ingredient.Calories);
-        }
+        //[TestMethod]
+        //public void ConvertCaloriesValue()
+        //{
+        //    Assert.AreEqual(correctCalories, ingredient.Calories);
+        //}
 
-        [TestMethod]
-        public void ConvertTotalFat()
-        {
-            Assert.AreEqual(correctTotalFat, ingredient.TotalFat);
-        }
+        //[TestMethod]
+        //public void ConvertTotalFat()
+        //{
+        //    Assert.AreEqual(correctTotalFat, ingredient.TotalFat);
+        //}
 
-        [TestMethod]
-        public void ConvertSaturatedFat()
-        {
-            Assert.AreEqual(correctSaturatedFat, ingredient.SaturatedFat);
-        }
+        //[TestMethod]
+        //public void ConvertSaturatedFat()
+        //{
+        //    Assert.AreEqual(correctSaturatedFat, ingredient.SaturatedFat);
+        //}
 
-        [TestMethod]
-        public void ConvertTotalCarbohydrate()
-        {
-            Assert.AreEqual(correctTotalCarbohydrate, ingredient.TotalCarbohydrate);
-        }
+        //[TestMethod]
+        //public void ConvertTotalCarbohydrate()
+        //{
+        //    Assert.AreEqual(correctTotalCarbohydrate, ingredient.TotalCarbohydrate);
+        //}
 
-        [TestMethod]
-        public void ConvertSodium()
-        {
-            Assert.AreEqual(correctSodium, ingredient.Sodium);
-        }
+        //[TestMethod]
+        //public void ConvertSodium()
+        //{
+        //    Assert.AreEqual(correctSodium, ingredient.Sodium);
+        //}
 
-        [TestMethod]
-        public void ConvertProtein()
-        {
-            Assert.AreEqual(correctProtein, ingredient.Protein);
-        }
+        //[TestMethod]
+        //public void ConvertProtein()
+        //{
+        //    Assert.AreEqual(correctProtein, ingredient.Protein);
+        //}
 
-        [TestMethod]
-        public void ConvertVitaminA()
-        {
-            decimal correct = 3.11M;
-            Assert.AreEqual(correct , ingredient.VitaminA);
-        }
+        //[TestMethod]
+        //public void ConvertVitaminA()
+        //{
+        //    decimal correct = 3.11M;
+        //    Assert.AreEqual(correct , ingredient.VitaminA);
+        //}
 
-        [TestMethod]
-        public void ConvertServingSize()
-        {
-            decimal correct = 7.25M;
-            Assert.AreEqual(correct, ingredient.ServingSize);
-        }
-    }
+        //[TestMethod]
+        //public void ConvertServingSize()
+        //{
+        //    decimal correct = 7.25M;
+        //    Assert.AreEqual(correct, ingredient.ServingSize);
+        //}
+    }   */
 }

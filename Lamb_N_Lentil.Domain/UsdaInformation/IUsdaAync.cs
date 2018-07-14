@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Lamb_N_Lentil.Domain.UsdaList;
 
 namespace Lamb_N_Lentil.Domain.UsdaInformation
 {
     public interface IUsdaAsync
     {
-        Task<List<IIngredient>> GetListOfIngredientsFromTextSearch(string searchString, string dataSource = ""); 
-        int FetchedTotalFromSearch { get; set; }
-        string FetchedIngredientsInIngredient { get; set; }
-        Task<UsdaFoodReport> FetchUsdaFoodReport(string ndbno);
+        Task<UsdaFoodReport> FetchUsdaFoodReport(string ndbno); 
+        Task<UsdaListofFoods> FetchUsdaFoodList(string searchText);
     }
 }

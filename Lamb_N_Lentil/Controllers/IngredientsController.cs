@@ -10,24 +10,25 @@ using Lamb_N_Lentil.UI.Models;
 
 namespace Lamb_N_Lentil.UI.Controllers
 {
-    public class IngredientsController : EntityController
+    public class IngredientsController :  Controller
     {
 
-        public IUsdaAsync usdaAsync;
-        public IUsdaAsyncFoodReport usdaAsyncFoodReport;
+        public readonly IUsdaAsync usdaAsync;
+        public readonly IUsdaAsync usdaAsyncFoodReport;
+     //   private  UsdaFoodReportViewModel  vm;
 
 
         public IngredientsController()
         {
-            usdaAsync = new UsdaAsync(); 
-            usdaAsyncFoodReport = new UsdaAsyncFoodReport();
+            usdaAsync = new UsdaAsync();
+            usdaAsyncFoodReport = new UsdaAsyncFoodReport(); 
         }
 
         public IngredientsController(Controller _controller = null) : base()
         {
         }
 
-        public IngredientsController(Controller _controller = null, IUsdaAsync _usdaAsync = null, IUsdaAsyncFoodReport _usdaAsyncFoodReport = null) : base()
+        public IngredientsController(Controller _controller = null, IUsdaAsync _usdaAsync = null, IUsdaAsync _usdaAsyncFoodReport = null) : base()
         {
             usdaAsync = _usdaAsync;
             usdaAsyncFoodReport = _usdaAsyncFoodReport;
@@ -36,36 +37,16 @@ namespace Lamb_N_Lentil.UI.Controllers
         // GET: Ingredients
         public ActionResult Index()
         {
-            List<IngredientListViewModel> vm = new List<IngredientListViewModel>();
-            ViewBag.SearchText = "Write Your Query Here";
             ViewBag.SearchTotal = 0;
             ViewBag.TotalShown = 0;
-            return View(UIType.Index.ToString(), vm);
+            return View(UIType.Index.ToString() );
         }
 
 
         public async Task<ActionResult> ShowResults(string searchText)
         {
-            var ingredients = await usdaAsync.GetListOfIngredientsFromTextSearch(searchText);
-            List<IngredientListViewModel> vm = new List<IngredientListViewModel>();
-
-            foreach (var ingredient in ingredients)
-            {
-                vm.Add(IngredientListViewModel.MapIIngredientToIngredientListViewModel(ingredient));
-            }
-
-
-            if (ingredients.Count() == 0)
-            {
-                ViewBag.NoResults = "Nothing was found.  Please try a different search.";
-            }
-            else
-            {
-                ViewBag.NoResults = "";
-            }
-            
-                 ViewBag.SearchTotal = ingredients.Count();
-            ViewBag.TotalShown = ingredients.Count();
+            var list = await usdaAsync.FetchUsdaFoodList(searchText);
+            var vm = await ListOfFoodsViewModel.MapListOfSearchedFoodsToListOfFoods(list);
 
             return View(UIType.Index.ToString(), vm);
         }
@@ -73,8 +54,7 @@ namespace Lamb_N_Lentil.UI.Controllers
         public async Task<ViewResult> Details(string ndbno)
         {
             var report = await usdaAsyncFoodReport.FetchUsdaFoodReport(ndbno);
-            IIngredient ingredient = MapUsdaFoodReportToIIngredient.ConvertUsdaFoodReportToIIngredient(report);
-            var vm = IngredientDetailViewModel.MapIIngredientToIngredientDetailViewModel(ingredient);
+            var vm = UsdaFoodReportViewModel.MapUsdaFoodReportToItsViewModel(report);
             return View(UIType.Details.ToString(), vm);
         }
     }

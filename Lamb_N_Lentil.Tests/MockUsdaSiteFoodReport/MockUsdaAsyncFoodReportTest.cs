@@ -8,7 +8,7 @@ namespace Lamb_N_Lentil.Tests.MockUsdaSiteFoodReport
     [TestClass]
     public class MockUsdaAsyncFoodReportTest : MockUsdaAsyncForFoodReport
     {
-        IUsdaAsyncFoodReport usdaAsyncFoodReport;
+        IUsdaAsync usdaAsyncFoodReport;
 
         public MockUsdaAsyncFoodReportTest()
         {
@@ -53,7 +53,7 @@ namespace Lamb_N_Lentil.Tests.MockUsdaSiteFoodReport
             string testString = "ShouldReturnIngredients";
            decimal correct = 1.0101M;
             UsdaFoodReport report = await usdaAsyncFoodReport.FetchUsdaFoodReport(testString);
-            decimal returned = report.foods[0].food.nutrients[0].measures[0].qty; 
+            decimal returned = report.foods.First().food.nutrients.First().measures.First().qty; 
             Assert.AreEqual(correct, returned);
         }
     }

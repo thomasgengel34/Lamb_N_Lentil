@@ -1,6 +1,6 @@
 {
   "foods": [
-    {folic 
+    { 
       "food": {
         "sr": "Legacy",
         "type": "f",
@@ -1927,7 +1927,7 @@
               {
                 "label": "oz",
                 "eqv": 28.35,
-                "eunit": "g", 
+                "eunit": "g",
                 "qty": 1.0,
                 "value": 8.0
               },

@@ -1,10 +1,10 @@
 ﻿using System;
-using Lamb_N_Lentil.Domain;
+using Lamb_N_Lentil.Domain.UsdaInformation;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lamb_N_Lentil.Tests.Classes
 {
-    [TestClass]
+ /*   [TestClass]
     public class EntityClassShould
     {
         [TestMethod]
@@ -126,5 +126,5 @@ namespace Lamb_N_Lentil.Tests.Classes
             var pInfo = typeof(Entity).GetProperty("FolicAcid");
             Assert.AreEqual("FolicAcid", pInfo.Name);
         }
-    }
+    }  */
 } 

@@ -20,11 +20,11 @@ namespace Lamb_N_Lentil.Tests.Controllers
 
 
         [TestMethod]
-       public void InheritEntityController()
+       public void InheritController()
         {
-            bool IsEntityController = type.IsSubclassOf(typeof(EntityController));
+            bool IsController = type.IsSubclassOf(typeof(Controller));
 
-            Assert.IsTrue(IsEntityController);
+            Assert.IsTrue(IsController);
         }
 
         [TestMethod]

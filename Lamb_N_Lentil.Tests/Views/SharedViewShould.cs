@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lamb_N_Lentil.Tests.Views
-{
+{ 
     [TestClass]
     public class SharedViewShould: BaseViewTests
     { 
@@ -36,5 +36,5 @@ namespace Lamb_N_Lentil.Tests.Views
             HaveCorrectText(
                                      "<li>@Html.ActionLink(UIType.Ingredient.ToString(), UIType.Index.ToString(), new { Controller= UIType.Ingredients.ToString()})</li>"
                                     );
-    } 
+    }    
 }

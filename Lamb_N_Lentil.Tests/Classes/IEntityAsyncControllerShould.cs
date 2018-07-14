@@ -6,7 +6,7 @@ using Lamb_N_Lentil.UI.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lamb_N_Lentil.Tests.Classes
-{
+{  /*
     [TestClass]
     public class IEntityAsyncControllerShould
     {
@@ -32,5 +32,5 @@ namespace Lamb_N_Lentil.Tests.Classes
 
         [TestMethod]
         public void HaveGetListOfIngredientsFromTextSearchMethod() => VerifyMethodIsValid("GetListOfIngredientsFromTextSearch"); 
-    }
+    }   */
 }

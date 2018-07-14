@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace Lamb_N_Lentil.Tests.Controllers
 {
-    [TestClass]
+  /*  [TestClass]
     public class IngredientControllerActionMethodsShouldInclude
     {
         Type type;
@@ -53,5 +53,5 @@ namespace Lamb_N_Lentil.Tests.Controllers
         }
 
 
-    }
+    }   */
 }
