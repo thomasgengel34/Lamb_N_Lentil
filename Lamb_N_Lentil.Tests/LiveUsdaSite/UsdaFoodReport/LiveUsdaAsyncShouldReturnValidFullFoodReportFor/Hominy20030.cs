@@ -1,10 +1,10 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 
-namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
+namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldReturnValidFullFoodReportFor
 {
     [TestClass]
-    public class LiveUsdaAsyncShouldReturnValidFoodReportForHominy20030:LiveUsdaAsyncShouldReturnValidFoodReportWhen
+    public class  Hominy20030: LiveUsdaSiteTestSetup
     {    
         [TestInitialize]
         public async Task CallFetchReport()
@@ -16,7 +16,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void HasCorrectName()
         {
-            string correct = "Hominy, canned, white";
+           var correct = "Hominy, canned, white";
             Assert.AreEqual(correct, report.foods[0].food.desc.name);
         }
 
@@ -29,14 +29,14 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void HasCorrectUnitForFirstNutrient()
         {
-            string correct = "g";
+            var correct = "g";
             Assert.AreEqual(correct, report.foods[0].food.nutrients[0].unit);
         }
 
         [TestMethod]
         public void HasCorrectServingSizeForFirstNutrient()
         {
-            decimal correct = 0.0M;
+            var correct = 0.0M;
             Assert.AreEqual(correct, report.foods[0].food.nutrients[0].qty);
         }
     }   

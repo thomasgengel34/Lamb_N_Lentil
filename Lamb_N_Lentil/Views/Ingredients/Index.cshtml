@@ -12,8 +12,7 @@
     <h1>Search For Ingredients</h1>
 
     <p>You can use this to search for foods and their ingredients. This is a way of accessing the USDA database that may be more convenient for cooks and meal planners.  The database can be searched at: <a href="https://ndb.nal.usda.gov/ndb/search/list" target="_blank">the USDA nutritional site</a> and it may be more convenient for you to use it directly than to come here.  </p>
-    <h2 class="no_results">@ViewBag.NoResults</h2>
-
+    <h2 class="no_results">@ViewBag.NoResults</h2> 
     <p>  <label>Enter text to search for ingredients:</label></p>
     <p>Searches in the USDA databases are limited to 43 characters. Sorry!</p>
     @using (Html.BeginForm("ShowResults", UIType.Ingredients.ToString(), new { Controller = UIType.Ingredients.ToString(), searchText = "searchText" }))

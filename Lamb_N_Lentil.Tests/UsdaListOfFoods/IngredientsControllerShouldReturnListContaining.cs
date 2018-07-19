@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
+using UsdaFoodReport = Lamb_N_Lentil.Domain.UsdaInformation.UsdaFoodReport;
 
 namespace Lamb_N_Lentil.Tests.UsdaListOfFoods
 {
@@ -12,7 +13,7 @@ namespace Lamb_N_Lentil.Tests.UsdaListOfFoods
     public class IngredientControllerShouldReturnListContaining
     {
         private readonly IUsdaAsync usdaAsync = new UsdaAsync();
-        private readonly IUsdaAsync usdaAsyncFoodReport = new UsdaAsyncFoodReport();
+        private readonly IUsdaAsync usdaAsyncFoodReport = new UsdaFoodReport();
         private IngredientsController Controller;
         private ActionResult actionResult;
         private ViewResult viewResult;

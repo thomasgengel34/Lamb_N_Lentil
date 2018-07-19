@@ -1,22 +1,18 @@
-﻿using Lamb_N_Lentil.Domain;
+﻿using System.Threading.Tasks;
 using Lamb_N_Lentil.Domain.UsdaInformation;
 using Lamb_N_Lentil.UI.Controllers;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Linq;
-using System.Threading.Tasks;
 using UsdaFR = Lamb_N_Lentil.Domain.UsdaInformation.UsdaFoodReport;
 
-namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
+namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldReturnValidFullFoodReportFor
 {
-    [TestClass]
-    public class LiveUsdaAsyncShouldReturnValidFoodReportWhen
+    public class LiveUsdaSiteTestSetup
     {
         private protected readonly IUsdaAsync usdaAsync = new UsdaAsync();
         private protected IngredientsController Controller;
         private protected string Ndbno { get; set; }
         private protected UsdaFR report;
 
-        public LiveUsdaAsyncShouldReturnValidFoodReportWhen()
+        public LiveUsdaSiteTestSetup()
         {
             Controller = new IngredientsController(null, usdaAsync);
         }
@@ -25,5 +21,5 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         {
             report = await usdaAsync.FetchUsdaFoodReport(Ndbno);
         }
-    }
+    }    
 }

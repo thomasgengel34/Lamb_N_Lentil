@@ -6,11 +6,11 @@ using Lamb_N_Lentil.Domain.UsdaInformation;
 using System.Threading.Tasks;
 using System.Linq;
 
-namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
+namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldReturnValidFullFoodReportFor
 {   
     [TestClass]
-    public class LiveUsdaAsyncShouldReturnValidFoodReportForWalmartGardenRotini45058106
-        : LiveUsdaAsyncShouldReturnValidFoodReportWhen
+    public class WalmartGardenRotini45058106
+        : LiveUsdaSiteTestSetup
     { 
         [TestInitialize]
         public async Task CallFetchReport()
@@ -24,21 +24,23 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void WithCorrectName()
         {
-            string correct  = "GARDEN ROTINI, UPC: 078742228679"; 
-            Assert.AreEqual(correct , report.foods[0].food.desc.name);
+            var correct  = "GARDEN ROTINI, UPC: 078742228679";
+            var returned = report.foods[0].food.desc.name;
+            Assert.AreEqual(correct , returned);
         }
 
         [TestMethod]
         public void WithCorrectNdbno()
-        { 
-            Assert.AreEqual(Ndbno, report.foods[0].food.desc.ndbno);
+        {
+            var returned = report.foods[0].food.desc.ndbno;
+            Assert.AreEqual(Ndbno, returned );
         }
          
 
         [TestMethod]
         public void Manufacturer()
         { 
-            decimal correct = 0.0M; 
+            var correct = 0.0M; 
             var returned = (from c in report.foods[0].food.nutrients
                             where c.nutrient_id == 431
                             select c.measures[0].value).FirstOrDefault();
@@ -48,14 +50,15 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void HasCorrectServingSizeForFirstNutrient()
         {
-            decimal correct = 0.75M;
-            Assert.AreEqual(correct, report.foods[0].food.nutrients[0].measures[0].qty);
+            var correct = 0.75M;
+            var returned = report.foods[0].food.nutrients[0].measures[0].qty;
+            Assert.AreEqual(correct, returned );
         }
 
         [TestMethod]
         public void FolicAcid()
         {
-            decimal correct = 0.0M;
+            var correct = 0.0M;
             var returned = (from c in report.foods[0].food.nutrients
                             where c.nutrient_id == 431
                             select c.measures[0].value).FirstOrDefault();

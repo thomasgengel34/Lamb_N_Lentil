@@ -1,0 +1,316 @@
+{
+  "foods": [
+    {
+      "food": {
+        "sr": "v0.0 June, 2018",
+        "type": "b",
+        "desc": {
+          "ndbno": "45066324",
+          "name": "CHILI BEANS, SMALL RED BEANS IN CHILI SAUCE, UPC: 078742370873",
+          "ds": "Label Insight",
+          "manu": "WAL-MART STORES, INC.",
+          "ru": "g"
+        },
+        "ing": {
+          "desc": "PREPARED DRY BEANS, WATER, CONTAINS LESS THAN 2% OF THE FOLLOWING INGREDIENTS: SALT, CHILI POWDER (CHILI PEPPER, CUMIN, SALT, GARLIC POWDER, OREGANO), TOMATO PASTE, SUGAR, MODIFIED CORNSTARCH, CORNSTARCH, SOYBEAN OIL, PAPRIKA, SPICE, TORULA YEAST, ONION POWDER, GARLIC POWDER, OLEORESIN PAPRIKA, MUSTARD FLOUR, NATURAL FLAVORS.",
+          "upd": "07/14/2017"
+        },
+        "nutrients": [
+          {
+            "nutrient_id": "208",
+            "name": "Energy",
+            "derivation": "LCCS",
+            "group": "Proximates",
+            "unit": "kcal",
+            "value": "85",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "110"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "203",
+            "name": "Protein",
+            "derivation": "LCCS",
+            "group": "Proximates",
+            "unit": "g",
+            "value": "4.62",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "6.01"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "204",
+            "name": "Total lipid (fat)",
+            "derivation": "LCCS",
+            "group": "Proximates",
+            "unit": "g",
+            "value": "0.77",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "1.00"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "205",
+            "name": "Carbohydrate, by difference",
+            "derivation": "LCCS",
+            "group": "Proximates",
+            "unit": "g",
+            "value": "15.38",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "19.99"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "291",
+            "name": "Fiber, total dietary",
+            "derivation": "LCCS",
+            "group": "Proximates",
+            "unit": "g",
+            "value": "4.6",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "6.0"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "269",
+            "name": "Sugars, total",
+            "derivation": "LCCS",
+            "group": "Proximates",
+            "unit": "g",
+            "value": "1.54",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "2.00"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "301",
+            "name": "Calcium, Ca",
+            "derivation": "LCCD",
+            "group": "Minerals",
+            "unit": "mg",
+            "value": "31",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "40"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "303",
+            "name": "Iron, Fe",
+            "derivation": "LCCD",
+            "group": "Minerals",
+            "unit": "mg",
+            "value": "1.11",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "1.44"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "306",
+            "name": "Potassium, K",
+            "derivation": "LCCS",
+            "group": "Minerals",
+            "unit": "mg",
+            "value": "177",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "230"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "307",
+            "name": "Sodium, Na",
+            "derivation": "LCCS",
+            "group": "Minerals",
+            "unit": "mg",
+            "value": "362",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "471"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "401",
+            "name": "Vitamin C, total ascorbic acid",
+            "derivation": "LCCD",
+            "group": "Vitamins",
+            "unit": "mg",
+            "value": "0.0",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "0.0"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "318",
+            "name": "Vitamin A, IU",
+            "derivation": "LCCD",
+            "group": "Vitamins",
+            "unit": "IU",
+            "value": "154",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "200"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "606",
+            "name": "Fatty acids, total saturated",
+            "derivation": "LCCD",
+            "group": "Lipids",
+            "unit": "g",
+            "value": "0.000",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "0.000"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "645",
+            "name": "Fatty acids, total monounsaturated",
+            "derivation": "LCCS",
+            "group": "Lipids",
+            "unit": "g",
+            "value": "0.000",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "0.000"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "646",
+            "name": "Fatty acids, total polyunsaturated",
+            "derivation": "LCCS",
+            "group": "Lipids",
+            "unit": "g",
+            "value": "0.000",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "0.000"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "605",
+            "name": "Fatty acids, total trans",
+            "derivation": "LCCS",
+            "group": "Lipids",
+            "unit": "g",
+            "value": "0.000",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "0.000"
+              }
+            ]
+          },
+          {
+            "nutrient_id": "601",
+            "name": "Cholesterol",
+            "derivation": "LCCD",
+            "group": "Lipids",
+            "unit": "mg",
+            "value": "0",
+            "measures": [
+              {
+                "label": "cup",
+                "eqv": 130.0,
+                "eunit": "g",
+                "qty": 0.5,
+                "value": "0"
+              }
+            ]
+          }
+        ],
+        "footnotes": []
+      }
+    }
+  ],
+  "count": 1,
+  "notfound": 0,
+  "api": 2.0
+}

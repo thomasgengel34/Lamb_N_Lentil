@@ -21,6 +21,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reports", "Reports", "{4EF1B80D-A9D2-4CBE-ABAA-CB8BBBBDE416}"
 	ProjectSection(SolutionItems) = preProject
 		01009CheddarCheeseFullReport.json = 01009CheddarCheeseFullReport.json
+		45066324GVChiliBeans.json = 45066324GVChiliBeans.json
 		45169419OrganicPepperSauceBasicReport.json = 45169419OrganicPepperSauceBasicReport.json
 		45169419OrganicPepperSauceFullReport.json = 45169419OrganicPepperSauceFullReport.json
 		4518498.json = 4518498.json

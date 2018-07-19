@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Lamb_N_Lentil.Domain.UsdaInformation;
-using Lamb_N_Lentil.Domain.UsdaList;
+using Lamb_N_Lentil.Domain.UsdaInformation.List;
 using Lamb_N_Lentil.UI.Controllers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 

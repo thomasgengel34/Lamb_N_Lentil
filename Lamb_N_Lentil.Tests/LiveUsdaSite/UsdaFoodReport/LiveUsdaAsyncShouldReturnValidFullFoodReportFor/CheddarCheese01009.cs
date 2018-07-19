@@ -1,16 +1,11 @@
-﻿using System.Collections.Generic;
-using Lamb_N_Lentil.Domain;
-using Lamb_N_Lentil.UI.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Lamb_N_Lentil.Domain.UsdaInformation;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using System.Linq;
-using UsdaFR = Lamb_N_Lentil.Domain.UsdaInformation.UsdaFoodReport;
+using Microsoft.VisualStudio.TestTools.UnitTesting; 
 
-namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
+namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldReturnValidFullFoodReportFor
 {
-     [TestClass]
-    public class LiveUsdaAsyncShouldReturnValidFoodReportForCheddarCheese01009 : LiveUsdaAsyncShouldReturnValidFoodReportWhen
+    [TestClass]
+    public class LiveUsdaAsyncShouldReturnValidFoodReportForCheddarCheese01009 : LiveUsdaSiteTestSetup
     { 
         [TestInitialize]
         public async Task CallFetchReport()
@@ -36,10 +31,9 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
          
 
         [TestMethod]
-        public async Task Manufacturer()
+        public void Manufacturer()
         { 
-            var correct = 0.0M;
-            UsdaFR report = await usdaAsync.FetchUsdaFoodReport(Ndbno);
+            var correct = 0.0M; ;
             var returned = (from c in report.foods[0].food.nutrients
                             where c.nutrient_id == 431
                             select c.measures[0].value).FirstOrDefault();

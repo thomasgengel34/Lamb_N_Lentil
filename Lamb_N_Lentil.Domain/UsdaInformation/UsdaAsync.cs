@@ -1,4 +1,4 @@
-﻿using Lamb_N_Lentil.Domain.UsdaList;
+﻿using Lamb_N_Lentil.Domain.UsdaInformation.List;
 using System;
 using System.Linq;
 using System.Net.Http;

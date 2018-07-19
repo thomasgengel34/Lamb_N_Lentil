@@ -6,10 +6,10 @@ using Lamb_N_Lentil.UI.Controllers;
 using Lamb_N_Lentil.UI.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
+namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDetailMethodShouldFor
 {
     [TestClass]
-    public class IngredientControllerDetailMethodShouldForDicedPeaches:IngredientControllerDetailMethodShould
+    public class DicedPeaches45032698 : IngredientControllerDetailMethodShould
     { 
 
         [TestInitialize]
@@ -24,7 +24,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void HaveNdbno()
         {
-            var correct = "45032698";
+            var correct = searchText;
             var returned = model.Ndbno;
             Assert.AreEqual(correct, returned);
         }

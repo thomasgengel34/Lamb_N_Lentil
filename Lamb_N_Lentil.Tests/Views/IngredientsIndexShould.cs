@@ -33,9 +33,8 @@ namespace Lamb_N_Lentil.Tests.Views
         [TestMethod]
         public void HaveCorrectTextBoxToSearchForIngredients()
         {
-            string testString = "@Html.TextBox";// (\"searchText\",\"\",   new { @class = \"ingredientTextBox\", placeholder = \"Enter Description of What You are Looking For\", maxlength = \"43\", length=\"43\" })"; 
-            HaveCorrectText(testString);
-            //   @Html.TextBox("searchText", "", new { @class = "ingredientTextBox", placeholder = "Enter Description of What You are Looking For", maxlength = "43", length = "43" })
+            var correct = "  @Html.TextBox(\"searchText\", \"\", new { @class = \"ingredientTextBox\", placeholder = \"Write Your Query Here\", maxlength = \"43\", length = \"43\" })"; 
+            HaveCorrectText(correct); 
         }
 
         [TestMethod]
@@ -44,5 +43,6 @@ namespace Lamb_N_Lentil.Tests.Views
             string testString = "<h2 class=\"no_results\">@ViewBag.NoResults</h2>";
             HaveCorrectText(testString);
         }
+ 
     }
 }

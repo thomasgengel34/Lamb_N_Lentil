@@ -20,109 +20,109 @@ namespace Lamb_N_Lentil.UI.Models
         public string ServingSize { get; set; }
 
         public List<Nutrient> Nutrients { get; set; }
-        public int Calories { get; set; }
+        public decimal Calories { get; set; }
 
         [Display(Name = "Total Fat")]
-        public int TotalFat { get; set; }
+        public decimal TotalFat { get; set; }
         public string TotalFatUnit { get; set; }
         public int TotalFatPercentageDailyValue { get; set; }
 
         [Display(Name = "Saturated Fat")]
-        public int SaturatedFat { get; set; }
+        public decimal SaturatedFat { get; set; }
         public string SaturatedFatUnit { get; set; }
         public int SaturatedFatPercentageDailyValue { get; set; }
 
         [Display(Name = "Trans Fat")]
-        public int TransFat { get; set; }
+        public decimal TransFat { get; set; }
         public string TransFatUnit { get; set; }
 
         [Display(Name = "Polyunsaturated Fat")]
-        public int PolyunsaturatedFat { get; set; }
+        public decimal PolyunsaturatedFat { get; set; }
         public string PolyunsaturatedFatUnit { get; set; }
 
         [Display(Name = "Monounsaturated Fat")]
-        public int MonounsaturatedFat { get; set; }
-        public string MonounsaturatedFatUnit { get; set; } 
-        
-        public int Cholesterol { get; set; }
+        public decimal MonounsaturatedFat { get; set; }
+        public string MonounsaturatedFatUnit { get; set; }
+
+        public decimal Cholesterol { get; set; }
         public string CholesterolUnit { get; set; }
         public int CholesterolPercentageDailyValue { get; set; }
 
-        public int Sodium { get; set; }
+        public decimal Sodium { get; set; }
         public string SodiumUnit { get; set; }
         public int SodiumPercentageDailyValue { get; set; }
 
-        public int Potassium { get; set; }
+        public decimal Potassium { get; set; }
         public string PotassiumUnit { get; set; }
         public int PotassiumPercentageDailyValue { get; set; }
 
         [Display(Name = "Total Carbohydrate")]
-        public int TotalCarbohydrate { get; set; }
+        public decimal TotalCarbohydrate { get; set; }
         public string TotalCarbohydrateUnit { get; set; }
         public int TotalCarbohydratePercentageDailyValue { get; set; }
 
         [Display(Name = "Dietary Fiber")]
-        public int DietaryFiber  { get; set; }
+        public decimal DietaryFiber  { get; set; }
         public string DietaryFiberUnit { get; set; }
         public int DietaryFiberPercentageDailyValue { get; set; }
 
-        public int Sugars { get; set; }
+        public decimal Sugars { get; set; }
         public string SugarsUnit { get; set; }
-        
-        public int Protein { get; set; }
+
+        public decimal Protein { get; set; }
         public string ProteinUnit { get; set; }
 
         [Display(Name = "Vitamin A")]
-        public int VitaminA { get; set; }
+        public decimal VitaminA { get; set; }
         public string VitaminAUnit { get; set; }
         public int VitaminAPercentageDailyValue { get; set; }
 
         [Display(Name = "Vitamin C")]
-        public int VitaminC { get; set; }
+        public decimal VitaminC { get; set; }
         public string VitaminCUnit { get; set; }
         public int VitaminCPercentageDailyValue { get; set; }
 
-        public int Calcium { get; set; }
+        public decimal Calcium { get; set; }
         public string CalciumUnit { get; set; }
         public int CalciumPercentageDailyValue { get; set; }
 
-        public int Iron { get; set; }
+        public decimal Iron { get; set; }
         public string IronUnit { get; set; }
         public int IronPercentageDailyValue { get; set; }
 
-        public int Thiamine { get; set; }
+        public decimal Thiamine { get; set; }
         public string ThiamineUnit { get; set; }
         public int ThiaminePercentageDailyValue { get; set; }
 
-        public int Riboflavin { get; set; }
+        public decimal Riboflavin { get; set; }
         public string RiboflavinUnit { get; set; }
         public int RiboflavinPercentageDailyValue { get; set; }
 
-        public int Niacin { get; set; }
+        public decimal Niacin { get; set; }
         public string NiacinUnit { get; set; }
         public int NiacinPercentageDailyValue { get; set; }
 
         [Display(Name = "Folic Acid")]
-        public int FolicAcid { get; set; }
+        public decimal FolicAcid { get; set; }
         public string FolicAcidUnit { get; set; }
         public int FolicAcidPercentageDailyValue { get; set; }
 
         [Display(Name = "Vitamin D")]
-        public int VitaminD { get; set; }
+        public decimal VitaminD { get; set; }
         public string VitaminDUnit { get; set; }
         public int VitaminDPercentageDailyValue { get; set; }
 
         [Display(Name = "Vitamin B12")]
-        public int VitaminB12 { get; set; }
+        public decimal VitaminB12 { get; set; }
         public string VitaminB12Unit { get; set; }
         public int VitaminB12PercentageDailyValue { get; set; }
 
         [Display(Name = "Vitamin B6")]
-        public int VitaminB6 { get; set; }
+        public decimal VitaminB6 { get; set; }
         public string VitaminB6Unit { get; set; }
         public int VitaminB6PercentageDailyValue { get; set; }
 
-        public int Magnesium { get; set; }
+        public decimal Magnesium { get; set; }
         public string MagnesiumUnit { get; set; }
         public int MagnesiumPercentageDailyValue { get; set; }
 
@@ -174,11 +174,11 @@ namespace Lamb_N_Lentil.UI.Models
 
                     vm.Sodium = GetNutrientValue(vm, food, 307);
                     vm.SodiumUnit = GetNutrientUnit(vm, food, 307);
-                    vm.SodiumPercentageDailyValue = Decimal.ToInt16(100 * vm.Sodium / 2400);
+                    vm.SodiumPercentageDailyValue = Decimal.ToInt16(100 * GetNutrientValue(vm, food, 307) / 2400);
 
                     vm.Potassium = GetNutrientValue(vm, food, 306);
                     vm.PotassiumUnit = GetNutrientUnit(vm, food, 306);
-                    vm.PotassiumPercentageDailyValue = Decimal.ToInt16(100 * vm.Potassium / 3500);
+                    vm.PotassiumPercentageDailyValue = Decimal.ToInt16(100 * GetNutrientValue(vm, food, 306) / 3500);
 
                     vm.TotalCarbohydrate = GetNutrientValue(vm, food, 205);
                     vm.TotalCarbohydrateUnit = GetNutrientUnit(vm, food, 205);
@@ -196,7 +196,7 @@ namespace Lamb_N_Lentil.UI.Models
 
                     vm.VitaminA = GetNutrientValue(vm, food, 318);
                     vm.VitaminAUnit = GetNutrientUnit(vm, food, 318);
-                    vm.VitaminAPercentageDailyValue = Decimal.ToInt16(100 * vm.VitaminA / 50);
+                    vm.VitaminAPercentageDailyValue = Decimal.ToInt16(1 * vm.VitaminA / 50);
 
                     vm.VitaminC = GetNutrientValue(vm, food, 401);
                     vm.VitaminCUnit = GetNutrientUnit(vm, food, 401);
@@ -245,21 +245,21 @@ namespace Lamb_N_Lentil.UI.Models
             }
             return vm;
         }
+         
 
-        private static int GetNutrientValue(UsdaFoodReportViewModel vm, food food, int id)
+        private static decimal GetNutrientValue(UsdaFoodReportViewModel vm, food food, int id)
         {
-            int value = 0;
+            Decimal value = 0;
             if (food.nutrients.Where(n => n.nutrient_id == id) != null && food.nutrients.Where(n => n.nutrient_id == id).FirstOrDefault() != null && food.nutrients.Where(n => n.nutrient_id == id).FirstOrDefault().measures != null)
             {
-                 value  = (Int16)(food.nutrients.Where(n => n.nutrient_id == id).FirstOrDefault().measures.FirstOrDefault().value);
-                vm.PolyunsaturatedFatUnit = food.nutrients.Where(n => n.nutrient_id == id).FirstOrDefault().measures.FirstOrDefault().label;
+                value =    food.nutrients.Where(n => n.nutrient_id == id).FirstOrDefault().measures.FirstOrDefault().value ; 
             }
-            
+
             return value;
         }
 
 
-      private static string GetNutrientUnit(UsdaFoodReportViewModel vm, food food, int id)
+        private static string GetNutrientUnit(UsdaFoodReportViewModel vm, food food, int id)
         {
             string unit = "";
             if (food.nutrients.Where(n => n.nutrient_id == id) != null && food.nutrients.Where(n => n.nutrient_id == id).FirstOrDefault() != null && food.nutrients.Where(n => n.nutrient_id == id).FirstOrDefault().measures != null)

@@ -3,10 +3,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 using System.Linq;
 
-namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
+namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldReturnValidFullFoodReportFor
 {    
     [TestClass]
-    public class LiveUsdaAsyncShouldReturnValidFoodReportForBrownAndServeBreakfastPatty45133988 : LiveUsdaAsyncShouldReturnValidFoodReportWhen
+    public class  BrownAndServeBreakfastPatty45133988 :  LiveUsdaSiteTestSetup
     {    
         [TestInitialize]
         public async Task CallFetchReport()
@@ -18,7 +18,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void HasCorrectName()
         {
-            string correct = "BANQUET Brown N Serve Original Patty, UNPREPARED, GTIN: 00031000184643";
+            var correct = "BANQUET Brown N Serve Original Patty, UNPREPARED, GTIN: 00031000184643";
             Assert.AreEqual(correct, report.foods[0].food.desc.name);
         }
 
@@ -31,14 +31,14 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void HasCorrectUnitForFirstNutrient()
         {
-            string correct = "kcal";
+            var correct = "kcal";
             Assert.AreEqual(correct, report.foods[0].food.nutrients[0].unit);
         }
 
         [TestMethod]
         public void HasCorrectServingSizeForFirstNutrient()
         {
-            decimal correct = 0.0M;
+            var correct = 0.0M;
             Assert.AreEqual(correct, report.foods[0].food.nutrients[0].qty);
         }
 
@@ -46,7 +46,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void DietaryFiber()
         { 
-            decimal correct = 0.00m; 
+            var correct = 0.00m; 
             var returned = (from c in report.foods[0].food.nutrients
                             where c.nutrient_id == 291
                             select c.measures[0].value).FirstOrDefault();
@@ -56,7 +56,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void Sugar()
         { 
-            decimal correct = 1.00M; 
+            var correct = 1.00M; 
             var returned = (from c in report.foods[0].food.nutrients
                             where c.nutrient_id == 269
                             select c.measures[0].value).FirstOrDefault();
@@ -66,7 +66,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void VitaminA()
         { 
-            decimal correct =  0.00M; 
+            var correct =  0.00M; 
             var returned = (from c in report.foods[0].food.nutrients
                             where c.nutrient_id == 318
                             select c.measures[0].value).FirstOrDefault();
@@ -76,7 +76,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void Iron()
         { 
-            decimal correct = 0.72M; 
+            var correct = 0.72M; 
             var returned = (from c in report.foods[0].food.nutrients
                             where c.nutrient_id == 303
                             select c.measures[0].value).FirstOrDefault();

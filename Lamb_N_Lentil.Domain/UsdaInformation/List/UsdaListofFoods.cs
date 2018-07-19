@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lamb_N_Lentil.Domain.UsdaList
+namespace Lamb_N_Lentil.Domain.UsdaInformation.List
 {
-    public class UsdaListofFoods
+    public class UsdaListofFoods 
     {
         public list list { get; set; }
     }

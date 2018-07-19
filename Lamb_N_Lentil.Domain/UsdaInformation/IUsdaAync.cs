@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Lamb_N_Lentil.Domain.UsdaInformation.List;
 using System.Threading.Tasks;
-using Lamb_N_Lentil.Domain.UsdaList;
 
 namespace Lamb_N_Lentil.Domain.UsdaInformation
 {

@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 using System.Linq;
 using UsdaFR = Lamb_N_Lentil.Domain.UsdaInformation.UsdaFoodReport;
 
-namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
+namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldReturnValidFullFoodReportFor
 {
     [TestClass]
-    public class LiveUsdaAsyncShouldReturnValidFoodReportForDicedPeaches45032698 : LiveUsdaSiteTestSetup
+    public class  DicedPeaches45032698 : LiveUsdaSiteTestSetup
     { 
         [TestInitialize]
         public async Task CallFetchReport()
@@ -28,9 +28,9 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void WithCorrectName()
         {
-            string correctName = "DICED PEACHES, UPC: 078742212050";
+           var correct = "DICED PEACHES, UPC: 078742212050";
 
-            Assert.AreEqual(correctName, report.foods[0].food.desc.name);
+            Assert.AreEqual(correct, report.foods[0].food.desc.name);
         }
 
         [TestMethod]
@@ -42,32 +42,32 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void WithCorrectIngredients()
         {
-            string correct  = "DICED PEACHES, WATER, SUGAR, NATURAL FLAVORS, ASCORBIC ACID (VITAMIN C) TO PROTECT COLOR, CITRIC ACID."; 
+            var correct  = "DICED PEACHES, WATER, SUGAR, NATURAL FLAVORS, ASCORBIC ACID (VITAMIN C) TO PROTECT COLOR, CITRIC ACID."; 
             Assert.AreEqual(correct , report.foods[0].food.ing.desc);
         }
 
         [TestMethod]
         public void WithCorrectUpdateDate()
         {
-            string correct = "04/10/2018"; 
-            string returned = report.foods[0].food.ing.upd;
+            var correct = "04/10/2018"; 
+            var returned = report.foods[0].food.ing.upd;
             Assert.AreEqual(correct, returned);
         }
 
         [TestMethod]
         public void WithCorrectEqv()
         {
-            decimal correct = 113.0M; 
-            decimal returned = report.foods[0].food.nutrients.First().measures.First().eqv;
+            var correct = 113.0M; 
+            var returned = report.foods[0].food.nutrients.First().measures.First().eqv;
             Assert.AreEqual(correct, returned);
         }
 
         [TestMethod]
         public void WithCorrectFoodGroupOrManufacturer()
         {
-            string correct = "WAL-MART STORES, INC."; 
-            string returnedFg = report.foods[0].food.desc.fg;
-            string returnedManu = report.foods[0].food.desc.manu;
+            var correct = "WAL-MART STORES, INC."; 
+           var returnedFg = report.foods[0].food.desc.fg;
+            var returnedManu = report.foods[0].food.desc.manu;
             Assert.AreEqual(correct, returnedManu);
             Assert.IsNull(returnedFg);
         }
@@ -75,7 +75,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void HasCorrectServingSizeForFirstNutrient()
         {
-            decimal correct = 0.0M;
+            var correct = 0.0M;
             Assert.AreEqual(correct, report.foods[0].food.nutrients[0].qty);
         }
     }

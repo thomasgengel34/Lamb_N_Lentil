@@ -2,10 +2,10 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
+namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldReturnValidFullFoodReportFor
 {
     [TestClass]
-    public class LiveUsdaAsyncShouldReturnValidFoodReportForForLambsQuartersSteamedNorthernPlainsIndians35197 : LiveUsdaAsyncShouldReturnValidFoodReportWhen
+    public class  LambsQuartersSteamedNorthernPlainsIndians35197 : LiveUsdaSiteTestSetup
     {    
         [TestInitialize]
         public async Task CallFetchReport()
@@ -17,7 +17,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void HasCorrectName()
         {
-            string correct = "Lambsquarters, steamed (Northern Plains Indians)";
+            var correct = "Lambsquarters, steamed (Northern Plains Indians)";
             Assert.AreEqual(correct, report.foods[0].food.desc.name);
         }
 

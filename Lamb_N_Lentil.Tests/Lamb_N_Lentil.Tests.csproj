@@ -118,29 +118,40 @@
     <Compile Include="Controllers\EnteringTextInTheSearchBoxOnTheIngredientsIndexViewShouldReturn.cs" />
     <Compile Include="Controllers\IngredientControllerShould.cs" />
     <Compile Include="Infrastructure\UITypeShould.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldForDicedPeaches.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFoodReportForDicedPeaches4503268.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFoodReportWhen.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForCreamOfWheatInstantHotCereal45034705.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForMargarineLikeButterBlendSoybeanOilAndButter04585.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForSpumoniIceCream45322307.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForMildDicedTomatoesWithGreenChilies45355854.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForYellowClingPeaches45032698.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForSoftMargarine45037282.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForOrganicPepperSauce451694190.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForLambsQuartersSteamedNorthernPlainsIndians35197.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForKiwi45209709.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForBrownAndServeBreakfastPatty45133988.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForKrogerBlendedGradeALowFatStrawberryYogurtUPC011110452979.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForVanillaIceCream19095With.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForWheaties45310806.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForWalmartGardenRotini45058106.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForWalmartWholeGreenBeans45258782.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForCheddarCheese01009.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForDicedPeaches45032698 .cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportForHominy20030.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShould.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaSiteTestSetup.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientControllerShowResultslMethodShouldForUnfindable.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientControllerShowResultslMethodShouldForUnfrostedCinammonPopTarts.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientControllerShowResultsMethodShould.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientControllerShowResultslMethodShouldForDicedPeaches.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\UnfrostedBrownSugarCinammonToasterPastries45309980.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\GVGardenRotini45058106.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\GVPremiumChunkChickenBreastInWater45123008.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\GVWholeGreenBeans45258782.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\GVOriginalSaltines45042577.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\BanquetBrownNServeTurkey45251384.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\WholeKernelSweetCorn45312409.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\GVChiliBeans45066324.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\DicedPeaches45032698.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\DicedPeaches4503268.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\CreamOfWheatInstantHotCereal45034705.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\MargarineLikeButterBlendSoybeanOilAndButter04585.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\SpumoniIceCream45322307.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\MildDicedTomatoesWithGreenChilies45355854.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\YellowClingPeaches45032698.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\SoftMargarine45037282.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\OrganicPepperSauce451694190.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\LambsQuartersSteamedNorthernPlainsIndians35197.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\Kiwi45209709.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\BrownAndServeBreakfastPatty45133988.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\KrogerBlendedGradeALowFatStrawberryYogurtUPC011110452979.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\VanillaIceCream19095With.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\Wheaties45310806.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\WalmartGardenRotini45058106.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\WalmartWholeGreenBeans45258782.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\CheddarCheese01009.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\DicedPeaches45032698 .cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\Hominy20030.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\IngredientControllerDetailMethodShould.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\LiveUsdaSiteTestSetup.cs" />
     <Compile Include="MockUsdaSiteFoodList\MockUsdaAsyncFoodList.cs" />
     <Compile Include="MockUsdaSiteFoodReport\MockUsdaAsyncForFoodReports.cs" />
     <Compile Include="MockUsdaSiteFoodList\MockUsdaAsyncFoodListTest.cs" />
@@ -178,9 +189,7 @@
       <Name>Lamb_N_Lentil.UI</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="LiveUsdaSite\UsdaFoodList\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

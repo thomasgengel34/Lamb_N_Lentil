@@ -2,24 +2,23 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UsdaFR = Lamb_N_Lentil.Domain.UsdaInformation.UsdaFoodReport;
 
-namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
-{    
+namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldReturnValidFullFoodReportFor
+{   
     [TestClass]
-    public class LiveUsdaAsyncShouldReturnValidFoodReportFoWheatiesInstantHotCereal45034705  : LiveUsdaAsyncShouldReturnValidFoodReportWhen
-    { 
+    public class LiveUsdaAsyncShouldReturnValidFoodReportForMildDicedTomatoesWithGreenChilies45355854 : LiveUsdaSiteTestSetup
+    {
         [TestInitialize]
-        public async Task  CallFetchReport()
+        public async Task CallFetchReport()
         {
-            Ndbno = "45034705";  
+            Ndbno = "45355854";
             await FetchReport();
         }
 
         [TestMethod]
         public void FolicAcid()
-        { 
-            decimal correct = 0.0M; 
+        {
+            var correct = 0.0M;
             var returned = (from c in report.foods[0].food.nutrients
                             where c.nutrient_id == 431
                             select c.measures[0].value).FirstOrDefault();
@@ -30,22 +29,22 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void WithCorrectName()
         {
-            string correctName = "CREAM OF WHEAT, INSTANT HOT CEREAL, ORIGINAL, UPC: 072400060700";
+            var correct  = "MILD DICED TOMATOES WITH GREEN CHILIES, UPC: 078742002170";
 
-            Assert.AreEqual(correctName, report.foods[0].food.desc.name);
+            Assert.AreEqual(correct, report.foods[0].food.desc.name);
         }
 
         [TestMethod]
         public void WithCorrectNdbno()
-        { 
+        {
             Assert.AreEqual(Ndbno, report.foods[0].food.desc.ndbno);
         }
-         
+
 
         [TestMethod]
         public void Manufacturer()
-        { 
-            decimal correct = 0.0M; 
+        {
+            var correct = 0.0M;
             var returned = (from c in report.foods[0].food.nutrients
                             where c.nutrient_id == 431
                             select c.measures[0].value).FirstOrDefault();
@@ -55,26 +54,27 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
         [TestMethod]
         public void HasCorrectServingSizeForFirstNutrient()
         {
-            decimal correct = 1.0M;
+            var correct = 0.5M;
             Assert.AreEqual(correct, report.foods[0].food.nutrients[0].measures[0].qty);
         }
-        
+
+
         [TestMethod]
         public void Calories()
-        { 
-            int correctkcal = 100; 
+        {
+           var correct  = 20;
             var result = from r in report.foods[0].food.nutrients
                          where r.name == "Energy"
                          select r.measures[0].value;
-            int returnedkcal = Convert.ToInt16(result.First());
-            Assert.AreEqual(correctkcal, returnedkcal);
+            var returned  = Convert.ToInt16(result.First());
+            Assert.AreEqual(correct, returned);
         }
 
 
         [TestMethod]
         public void Potassium()
-        { 
-            decimal correct = 0.0M; 
+        {
+            var correct = 170M;
             var returned = (from c in report.foods[0].food.nutrients
                             where c.nutrient_id == 306
                             select c.measures[0].value).FirstOrDefault();
@@ -84,8 +84,8 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
 
         [TestMethod]
         public void TransFat()
-        { 
-            decimal correct = 0.00m; 
+        {
+            var  correct = 0.00m;
             var returned = (from c in report.foods[0].food.nutrients
                             where c.nutrient_id == 605
                             select c.measures[0].value).FirstOrDefault();
@@ -94,32 +94,23 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport
 
 
         [TestMethod]
-        public void SaturatedFat()
-        { 
-            decimal correctSaturatedFat = 0.00m; 
+        public void SaturatedFatForYellowClingPeaches45032698()
+        {
+            var correct = 0.00M;
             var returned = (from c in report.foods[0].food.nutrients
                             where c.nutrient_id == 606
                             select c.measures[0].value).FirstOrDefault();
-            Assert.AreEqual(correctSaturatedFat, returned);
-        } 
+            Assert.AreEqual(correct , returned);
+        }
 
         [TestMethod]
-        public void PolyunsaturatedFat()
-        { 
-            decimal correctResult = 0.0M; 
+        public void  Sugars()
+        {
+            var correct  = 3.00M;
             var returned = (from c in report.foods[0].food.nutrients
-                            where c.nutrient_id == 646
+                            where c.nutrient_id == 269
                             select c.measures[0].value).FirstOrDefault();
-            Assert.AreEqual(correctResult, returned);
+            Assert.AreEqual(correct, returned); 
         }
-
-        [TestMethod]
-        public void TotalCarbohydrates()
-        { 
-            decimal correctTotalCarbohydrates = 71.43M; 
-            decimal returnedTotalCarbohydrates = Convert.ToDecimal(report.foods[0].food.nutrients[3].value);
-            Assert.AreEqual(correctTotalCarbohydrates, returnedTotalCarbohydrates);
-        }
-
-    }    
+    }   
 }
