@@ -17,27 +17,32 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldRet
         public void HasCorrectName()
         {
            var correct = "Hominy, canned, white";
-            Assert.AreEqual(correct, report.foods[0].food.desc.name);
+            var returned = report.foods[0].food.desc.name;
+            Assert.AreEqual(correct, returned );
         }
 
         [TestMethod]
         public void HasCorrectNdbno()
         {
-            Assert.AreEqual(Ndbno, report.foods[0].food.desc.ndbno);
+            var returned = report.foods[0].food.desc.ndbno;
+            Assert.AreEqual(Ndbno, returned);
         }
 
         [TestMethod]
         public void HasCorrectUnitForFirstNutrient()
         {
             var correct = "g";
-            Assert.AreEqual(correct, report.foods[0].food.nutrients[0].unit);
+            var returned = report.foods[0].food.nutrients[0].unit;
+            Assert.AreEqual(correct, returned);
         }
 
         [TestMethod]
         public void HasCorrectServingSizeForFirstNutrient()
         {
             var correct = 0.0M;
-            Assert.AreEqual(correct, report.foods[0].food.nutrients[0].qty);
+            var returned = report.foods[0].food.nutrients[0].qty;
+            Assert.AreEqual(correct, returned);
         }
+         
     }   
 }

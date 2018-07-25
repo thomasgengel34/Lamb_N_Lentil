@@ -30,14 +30,15 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldRet
         public void WithCorrectName()
         {
             var correct  = "Margarine-like, margarine-butter blend, soybean oil and butter";
-
-            Assert.AreEqual(correct, report.foods[0].food.desc.name);
+            var returned = report.foods[0].food.desc.name;
+            Assert.AreEqual(correct, returned );
         }
 
         [TestMethod]
         public void WithCorrectNdbno()
-        { 
-            Assert.AreEqual(Ndbno, report.foods[0].food.desc.ndbno);
+        {
+            var returned = report.foods[0].food.desc.ndbno;
+            Assert.AreEqual(Ndbno, returned);
         }
          
 
@@ -55,7 +56,8 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldRet
         public void HasCorrectServingSizeForFirstNutrient()
         {
             var correct = 1.0M;
-            Assert.AreEqual(correct, report.foods[0].food.nutrients[0].measures[0].qty);
+            var returned = report.foods[0].food.nutrients[0].measures[0].qty;
+            Assert.AreEqual(correct, returned);
         }
         
         [TestMethod]

@@ -29,8 +29,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldRet
         public void WithCorrectName()
         {
             var correct  = "WHOLE GREEN BEANS, UPC: 078742369426";
-            var returned = report.foods[0].food.desc.name;
-
+            var returned = report.foods[0].food.desc.name; 
             Assert.AreEqual(correct, returned );
         }
 
@@ -59,5 +58,15 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldRet
             var returned = report.foods[0].food.nutrients[0].measures[0].qty;
             Assert.AreEqual(correct, returned);
         }
+
+        [TestMethod]
+        public void HasCorrectUpdateDate()
+        {
+            var correct = "07/14/2017";
+            var returned = report.foods[0].food.ing.upd;
+            Assert.AreEqual(correct, returned);
+        }
     }  
+
+
 }

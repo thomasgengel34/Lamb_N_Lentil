@@ -85,12 +85,5 @@ namespace Lamb_N_Lentil.Tests.UsdaListOfFoods
             Assert.AreEqual(correct, returned);
         }
 
-        [TestMethod]
-        public void CorrectServingSizeOnFirstNutrient()
-        {
-            var correct = "CAN";
-            var returned = model.FoodItems.First().ServingSize;
-            Assert.AreEqual(correct, returned);
-        }
     }
 }

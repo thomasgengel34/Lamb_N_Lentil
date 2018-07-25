@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using _UsdaFoodReport = Lamb_N_Lentil.Domain.UsdaInformation.UsdaFoodReport;
+using System.Reflection;
 
 namespace Lamb_N_Lentil.UI.Models
 {
@@ -34,12 +36,12 @@ namespace Lamb_N_Lentil.UI.Models
                         Name = item.name,
                         Ndbno = item.ndbno,
                         Ingredients = report.foods.First().food.ing.desc,
-                        ServingSize = report.foods.First().food.nutrients.First().measures.First().label,
+                        ServingSize = GetServingSize(report),
                         MakerOrFoodGroup = FetchMakerOrFoodGroup(report),
                     };
 
                     vm.FoodItems.Add(foodItem);
-                }; 
+                };
             }
             return vm;
         }
@@ -55,9 +57,35 @@ namespace Lamb_N_Lentil.UI.Models
             else return maker;
         }
 
-        private static string FetchServingSize(string ndbno)
+        private static string GetServingSize(_UsdaFoodReport report)
         {
-            throw new NotImplementedException();
+            string serving = "";
+            if (report.foods.First() == null) return serving;
+            if (report.foods.First().food == null) return serving;
+            if (report.foods.First().food.nutrients == null) return serving;
+            if (report.foods.First().food.nutrients.First() == null) return serving;
+            if (report.foods.First().food.nutrients.First().measures == null) return serving;
+            var x = report.foods.First().food.nutrients.First().measures;
+            Type type = x.GetType();
+            if (type==typeof(Array))
+            {
+                serving= report.foods.First().food.nutrients.First().measures[0].label  ;
+            }
+            
+
+            //var x1 = report;
+            //var x2 = report.foods;
+            //var x3 = x2.First();
+            //var x4 = x3.food;
+            //var x5 = x4.nutrients;
+            //var x6 = x5.First();
+            //var x7 = x6.measures;
+            //var x8 = x7.First();
+            // var x9 = x8.label;
+
+            //   serving = report.foods.First().food.nutrients.First().measures.First().label;
+
+            return serving;
         }
 
         private static string GetIngredients(string ndbno)

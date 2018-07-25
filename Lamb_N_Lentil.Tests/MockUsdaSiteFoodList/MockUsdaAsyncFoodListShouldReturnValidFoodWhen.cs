@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lamb_N_Lentil.Tests.MockUsdaAsyncSiteFoodList
 {
-  /*  [TestClass]
+    [TestClass]
     public class MockUsdaAsyncFoodListShouldReturnValidFoodWhen
     {
         private readonly IUsdaAsync usdaAsync = new MockUsdaAsyncFoodList();
@@ -12,5 +12,5 @@ namespace Lamb_N_Lentil.Tests.MockUsdaAsyncSiteFoodList
 
         public MockUsdaAsyncFoodListShouldReturnValidFoodWhen() => 
             Controller = new IngredientsController(null, usdaAsync); 
-    }  */
+    }  
 }

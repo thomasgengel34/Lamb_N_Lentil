@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Lamb_N_Lentil.Domain.UsdaInformation;
-using Lamb_N_Lentil.UI.Controllers;
-using UsdaFR = Lamb_N_Lentil.Domain.UsdaInformation.UsdaFoodReport;
+using Lamb_N_Lentil.UI.Controllers; 
+using _UsdaFoodReport = Lamb_N_Lentil.Domain.UsdaInformation.UsdaFoodReport;
 
 namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldReturnValidFullFoodReportFor
 {
@@ -10,7 +10,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldRet
         private protected readonly IUsdaAsync usdaAsync = new UsdaAsync();
         private protected IngredientsController Controller;
         private protected string Ndbno { get; set; }
-        private protected UsdaFR report;
+        private protected  _UsdaFoodReport report;
 
         public LiveUsdaSiteTestSetup()
         {

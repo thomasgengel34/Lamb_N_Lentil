@@ -9,8 +9,7 @@ namespace Lamb_N_Lentil.Tests.ViewModelTest
 {
     [TestClass]
     public class UsdaFoodReportViewModel : Common
-    {
-
+    { 
         Type type;
         PropertyInfo pInfo;
 
@@ -38,6 +37,13 @@ namespace Lamb_N_Lentil.Tests.ViewModelTest
         {
              pInfo = type.GetProperty("Ingredients");
             Assert.AreEqual("Ingredients", pInfo.Name);
+        }
+
+        [TestMethod]
+        public void HaveUpdateDateProperty()
+        {
+            pInfo = type.GetProperty("UpdateDate");
+            Assert.AreEqual("UpdateDate", pInfo.Name);
         }
 
         [TestMethod]

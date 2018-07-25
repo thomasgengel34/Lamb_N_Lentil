@@ -1,13 +1,9 @@
-﻿using System.Collections.Generic;
-using Lamb_N_Lentil.Domain;
-using Lamb_N_Lentil.UI.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Lamb_N_Lentil.Domain.UsdaInformation;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldReturnValidFullFoodReportFor
-{   
+{
     [TestClass]
     public class WalmartGardenRotini45058106
         : LiveUsdaSiteTestSetup

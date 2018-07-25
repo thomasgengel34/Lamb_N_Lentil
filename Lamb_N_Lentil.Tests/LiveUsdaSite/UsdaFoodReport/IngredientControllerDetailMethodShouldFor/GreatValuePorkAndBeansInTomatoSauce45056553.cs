@@ -1,21 +1,22 @@
-﻿using Lamb_N_Lentil.UI.Controllers;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using System.Web.Mvc;
+using Lamb_N_Lentil.Domain.UsdaInformation;
+using Lamb_N_Lentil.UI.Controllers;
 using Lamb_N_Lentil.UI.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDetailMethodShouldFor
 {
     [TestClass]
-    public class  GVGardenRotini45058106 : IngredientControllerDetailMethodShould
+    public class GreatValuePorkAndBeansInTomatoSauce45056553 : IngredientControllerDetailMethodShould
     { 
 
         [TestInitialize]
         public new async Task Start()
         {
             Controller = new IngredientsController(null, usdaAsync, usdaAsyncFoodReport);
-            searchText = "45058106";
+            searchText = "45056553";
             viewResult = await Controller.Details(searchText);
             model = (UsdaFoodReportViewModel)viewResult.Model;
         }
@@ -32,7 +33,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void HaveName()
         { 
-            var correct = "GARDEN ROTINI, UPC: 078742228679";
+            var correct = "PORK & BEANS IN TOMATO SAUCE, UPC: 078742370842";
             var returned = model.Description;
             Assert.AreEqual(correct, returned);
         }
@@ -40,7 +41,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void HaveIngredients()
         { 
-            var correct = "SEMOLINA, DURUM FLOUR, SPINACH POWDER, TOMATO POWDER, NIACIN, FERROUS SULFATE (IRON), THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID.";
+            var correct = "PREPARED WHITE BEANS, WATER, TOMATO PUREE (WATER, TOMATO PASTE), SUGAR, CONTAINS LESS THAN 2% OF: HIGH FRUCTOSE CORN SYRUP, SALT, DISTILLED VINEGAR, PORK, BAKING SODA, ONION POWDER, NATURAL AND ARTIFICIAL FLAVORS, SPICE, CALCIUM CHLORIDE (A FIRMING AGENT).";
             var returned = model.Ingredients;
             Assert.AreEqual(correct, returned);
         }
@@ -48,17 +49,15 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void HasCorrectNumberOfNutrients()
         {
-            var correct = 20;
+            var correct = 17;
             var returned = model.Nutrients.Count();
             Assert.AreEqual(correct, returned);
-        } 
-         
+        }
 
-         
         [TestMethod]
         public void Iron()
         {
-            var correct = 1.80M;  
+            var correct = 1.44M; // can has 2
             var returned = model.Iron;
             Assert.AreEqual(correct, returned);
         }
@@ -66,9 +65,9 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void IronDailyPercentage()
         {
-            var correct = 10;
-            var returned = model.IronPercentageDailyValue;
-            Assert.AreEqual(correct, returned); 
-        } 
+            var correct = 8; //  can has 10 
+             var returned = model.IronPercentageDailyValue;
+            Assert.AreEqual(correct, returned);
+        }
     }
 }

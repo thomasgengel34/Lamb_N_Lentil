@@ -25,31 +25,16 @@ namespace Lamb_N_Lentil.Tests.Controllers
             bool IsController = type.IsSubclassOf(typeof(Controller));
 
             Assert.IsTrue(IsController);
-        }
-
-        [TestMethod]
-        public void HaveDefaultConstructor()
-        {
-            var constructor = type.GetConstructor(Type.EmptyTypes);
-            Assert.IsNotNull(constructor);
-        }
+        } 
 
         [TestMethod]
         public void HasTheCorrectNumberofConstructors()
         {
-            int correctNumber = 3;
-            var ctors = type.GetConstructors();
-            int count = ctors.Length;
-            Assert.AreEqual(correctNumber, count);
+            var correct  =  3;
+            var returned = type.GetConstructors().Length; 
+            Assert.AreEqual(correct, returned);
         }
-
-        [TestMethod]
-        public void HaveANonNullUsdaAsync() 
-        {
-            IngredientsController controller = new IngredientsController();
-            Assert.IsNotNull(controller.usdaAsync);
-        }
-
+         
         [TestMethod]
         public void HaveAUsdaAsyncOfTypeUsdaAsync()
         {

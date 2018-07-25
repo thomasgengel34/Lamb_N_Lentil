@@ -1,21 +1,22 @@
-﻿using Lamb_N_Lentil.UI.Controllers;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using System.Web.Mvc;
+using Lamb_N_Lentil.Domain.UsdaInformation;
+using Lamb_N_Lentil.UI.Controllers;
 using Lamb_N_Lentil.UI.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDetailMethodShouldFor
 {
     [TestClass]
-    public class GVWholeGreenBeans45258782 : IngredientControllerDetailMethodShould
+    public class GVDarkRedKidneyBeans45056370 : IngredientControllerDetailMethodShould
     { 
 
         [TestInitialize]
         public new async Task Start()
         {
             Controller = new IngredientsController(null, usdaAsync, usdaAsyncFoodReport);
-            searchText = "45258782";
+            searchText = "45056370";
             viewResult = await Controller.Details(searchText);
             model = (UsdaFoodReportViewModel)viewResult.Model;
         }
@@ -32,7 +33,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void HaveName()
         { 
-            var correct = "WHOLE GREEN BEANS, UPC: 078742369426";
+            var correct = "DARK RED KIDNEY BEANS, UPC: 078742370859";
             var returned = model.Description;
             Assert.AreEqual(correct, returned);
         }
@@ -40,7 +41,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void HaveIngredients()
         { 
-            var correct = "GREEN BEANS, WATER, SALT.";
+            var correct = "PREPARED KIDNEY BEANS, WATER, SUGAR, SALT, CALCIUM CHLORIDE (FIRMING AGENT), DISODIUM EDTA ADDED TO PROMOTE COLOR RETENTION.";
             var returned = model.Ingredients;
             Assert.AreEqual(correct, returned);
         }
@@ -54,26 +55,9 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         }
 
         [TestMethod]
-        public void TotalFat()
-        {
-            var correct = 0.00M;
-            var returned = model.TotalFat;
-            Assert.AreEqual(correct, returned);
-        }
-
-
-        [TestMethod]
-        public void TotalFatDailyPercentage()
-        {
-            var correct = 0;
-            var returned = model.TotalFatPercentageDailyValue;
-            AcceptIfOffByOne(correct, returned);
-        }
-
-        [TestMethod]
         public void Iron()
         {
-            var correct = 0.36M;
+            var correct = 1.79M;
             var returned = model.Iron;
             Assert.AreEqual(correct, returned);
         }
@@ -81,11 +65,9 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void IronDailyPercentage()
         {
-            var correct = 2;
+            var correct = 10;
             var returned = model.IronPercentageDailyValue;
             Assert.AreEqual(correct, returned);
-          //  AcceptIfOffByOne(correct, returned);
         }
-         
     }
 }

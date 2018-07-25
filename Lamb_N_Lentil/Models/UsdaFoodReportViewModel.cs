@@ -62,7 +62,7 @@ namespace Lamb_N_Lentil.UI.Models
         public int TotalCarbohydratePercentageDailyValue { get; set; }
 
         [Display(Name = "Dietary Fiber")]
-        public decimal DietaryFiber  { get; set; }
+        public decimal DietaryFiber { get; set; }
         public string DietaryFiberUnit { get; set; }
         public int DietaryFiberPercentageDailyValue { get; set; }
 
@@ -90,14 +90,17 @@ namespace Lamb_N_Lentil.UI.Models
         public string IronUnit { get; set; }
         public int IronPercentageDailyValue { get; set; }
 
+        [Display(Name = "Thiamine (Vitamin B-1)")]
         public decimal Thiamine { get; set; }
         public string ThiamineUnit { get; set; }
         public int ThiaminePercentageDailyValue { get; set; }
 
+        [Display(Name = "Riboflavin (Vitamin B-2)")]
         public decimal Riboflavin { get; set; }
         public string RiboflavinUnit { get; set; }
         public int RiboflavinPercentageDailyValue { get; set; }
 
+        [Display(Name = "Niacin(Vitamin B-3)")]
         public decimal Niacin { get; set; }
         public string NiacinUnit { get; set; }
         public int NiacinPercentageDailyValue { get; set; }
@@ -112,12 +115,12 @@ namespace Lamb_N_Lentil.UI.Models
         public string VitaminDUnit { get; set; }
         public int VitaminDPercentageDailyValue { get; set; }
 
-        [Display(Name = "Vitamin B12")]
+        [Display(Name = "Vitamin B-12")]
         public decimal VitaminB12 { get; set; }
         public string VitaminB12Unit { get; set; }
         public int VitaminB12PercentageDailyValue { get; set; }
 
-        [Display(Name = "Vitamin B6")]
+        [Display(Name = "Vitamin B-6")]
         public decimal VitaminB6 { get; set; }
         public string VitaminB6Unit { get; set; }
         public int VitaminB6PercentageDailyValue { get; set; }
@@ -125,6 +128,9 @@ namespace Lamb_N_Lentil.UI.Models
         public decimal Magnesium { get; set; }
         public string MagnesiumUnit { get; set; }
         public int MagnesiumPercentageDailyValue { get; set; }
+
+        [Display(Name = "Update Date")]
+        public string UpdateDate { get; set; }
 
         public static UsdaFoodReportViewModel MapUsdaFoodReportToItsViewModel(UsdaFoodReport report)
         {
@@ -145,6 +151,7 @@ namespace Lamb_N_Lentil.UI.Models
                 }
 
                 vm.Ingredients = food.ing.desc;
+                vm.UpdateDate= report.foods[0].food.ing.upd;
                 if (food.nutrients != null)
                 {
                     vm.ServingSize = food.nutrients.FirstOrDefault().measures.FirstOrDefault().label;
@@ -162,10 +169,10 @@ namespace Lamb_N_Lentil.UI.Models
                     vm.TransFat = GetNutrientValue(vm, food, 605);
                     vm.TransFatUnit = GetNutrientUnit(vm, food, 605);
 
-                    vm.PolyunsaturatedFat= GetNutrientValue(vm, food, 646 );
-                    vm.PolyunsaturatedFatUnit= GetNutrientUnit(vm, food, 646 );
+                    vm.PolyunsaturatedFat = GetNutrientValue(vm, food, 646);
+                    vm.PolyunsaturatedFatUnit = GetNutrientUnit(vm, food, 646);
 
-                    vm.MonounsaturatedFat = GetNutrientValue(vm, food, 645);  
+                    vm.MonounsaturatedFat = GetNutrientValue(vm, food, 645);
                     vm.MonounsaturatedFatUnit = GetNutrientUnit(vm, food, 645);
 
                     vm.Cholesterol = GetNutrientValue(vm, food, 601);
@@ -209,7 +216,7 @@ namespace Lamb_N_Lentil.UI.Models
                     vm.Iron = GetNutrientValue(vm, food, 303);
                     vm.IronUnit = GetNutrientUnit(vm, food, 303);
                     vm.IronPercentageDailyValue = Decimal.ToInt16(100 * vm.Iron / 18);
-                    
+
                     vm.Thiamine = GetNutrientValue(vm, food, 404);
                     vm.ThiamineUnit = GetNutrientUnit(vm, food, 404);
                     vm.ThiaminePercentageDailyValue = Decimal.ToInt16(100 * vm.Thiamine / 1.5M);
@@ -228,12 +235,12 @@ namespace Lamb_N_Lentil.UI.Models
 
                     vm.VitaminD = GetNutrientValue(vm, food, 324);
                     vm.VitaminDUnit = GetNutrientUnit(vm, food, 324);
-                    vm.VitaminDPercentageDailyValue = Decimal.ToInt16(100 * vm.VitaminD / 400.0M); 
+                    vm.VitaminDPercentageDailyValue = Decimal.ToInt16(100 * vm.VitaminD / 400.0M);
 
                     vm.VitaminB12 = GetNutrientValue(vm, food, 418);
                     vm.VitaminB12Unit = GetNutrientUnit(vm, food, 418);
                     vm.VitaminB12PercentageDailyValue = Decimal.ToInt16(100 * vm.VitaminB12 / 6.0M);
-                   
+
                     vm.VitaminB6 = GetNutrientValue(vm, food, 415);
                     vm.VitaminB6Unit = GetNutrientUnit(vm, food, 415);
                     vm.VitaminB6PercentageDailyValue = Decimal.ToInt16(100 * vm.VitaminB6 / 2.0M);
@@ -245,14 +252,14 @@ namespace Lamb_N_Lentil.UI.Models
             }
             return vm;
         }
-         
+
 
         private static decimal GetNutrientValue(UsdaFoodReportViewModel vm, food food, int id)
         {
             Decimal value = 0;
             if (food.nutrients.Where(n => n.nutrient_id == id) != null && food.nutrients.Where(n => n.nutrient_id == id).FirstOrDefault() != null && food.nutrients.Where(n => n.nutrient_id == id).FirstOrDefault().measures != null)
             {
-                value =    food.nutrients.Where(n => n.nutrient_id == id).FirstOrDefault().measures.FirstOrDefault().value ; 
+                value = food.nutrients.Where(n => n.nutrient_id == id).FirstOrDefault().measures.FirstOrDefault().value;
             }
 
             return value;
@@ -263,9 +270,9 @@ namespace Lamb_N_Lentil.UI.Models
         {
             string unit = "";
             if (food.nutrients.Where(n => n.nutrient_id == id) != null && food.nutrients.Where(n => n.nutrient_id == id).FirstOrDefault() != null && food.nutrients.Where(n => n.nutrient_id == id).FirstOrDefault().measures != null)
-            { 
-                unit = food.nutrients.Where(n => n.nutrient_id == id).First().unit;  
-            } 
+            {
+                unit = food.nutrients.Where(n => n.nutrient_id == id).First().unit;
+            }
             return unit;
         }
 
@@ -297,6 +304,6 @@ namespace Lamb_N_Lentil.UI.Models
                 listMeasures.Add(m);
             }
             return listMeasures;
-        } 
+        }
     }
 }

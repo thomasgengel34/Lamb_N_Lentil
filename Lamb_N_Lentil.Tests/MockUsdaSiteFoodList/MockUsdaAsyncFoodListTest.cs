@@ -5,7 +5,7 @@ using Lamb_N_Lentil.Tests.MockUsdaSiteFoodReport;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lamb_N_Lentil.Tests.MockUsdaAsyncSiteFoodList
-{  /*
+{   
     [TestClass]
     public class MockUsdaAsyncFoodListTest  
     {
@@ -47,5 +47,5 @@ namespace Lamb_N_Lentil.Tests.MockUsdaAsyncSiteFoodList
                 string returnedIngredients = report.foods.First().food.ing.desc;
            Assert.AreEqual(correctIngredients, returnedIngredients);
         } 
-    }   */
+    }   
 }

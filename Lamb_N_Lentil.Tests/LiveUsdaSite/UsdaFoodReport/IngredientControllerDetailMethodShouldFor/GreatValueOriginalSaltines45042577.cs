@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDetailMethodShouldFor
 {
     [TestClass]
-    public class  UnfrostedBrownSugarCinammonToasterPastries45309980 : IngredientControllerDetailMethodShould
+    public class  GreatValueOriginalSaltines45042577 : IngredientControllerDetailMethodShould
     { 
 
         [TestInitialize]
         public new async Task Start()
         {
             Controller = new IngredientsController(null, usdaAsync, usdaAsyncFoodReport);
-            searchText = "45309980";
+            searchText = "45042577";
             viewResult = await Controller.Details(searchText);
             model = (UsdaFoodReportViewModel)viewResult.Model;
         }
@@ -32,7 +32,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void HaveName()
         { 
-            var correct = "TOASTER PASTRIES, UPC: 038000301100";
+            var correct = "SALTINE CRACKERS, UPC: 078742351414";
             var returned = model.Description;
             Assert.AreEqual(correct, returned);
         }
@@ -40,7 +40,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void HaveIngredients()
         { 
-            var correct = "ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, VITAMIN B1 [THIAMIN MONONITRATE], VITAMIN B2 [RIBOFLAVIN], FOLIC ACID), SOYBEAN AND PALM OIL (WITH TBHQ FOR FRESHNESS), SUGAR, CORN SYRUP, DEXTROSE, HIGH FRUCTOSE CORN SYRUP, CRACKER MEAL, CONTAINS TWO PERCENT OR LESS OF MOLASSES, SALT, CALCIUM CARBONATE, LEAVENING (BAKING SODA, SODIUM ACID PYROPHOSPHATE, MONOCALCIUM PHOSPHATE), CINNAMON, WHEAT STARCH, SOY LECITHIN, VITAMIN A PALMITATE, NIACINAMIDE, REDUCED IRON, VITAMIN B6 (PYRIDOXINE HYDROCHLORIDE), VITAMIN B2 (RIBOFLAVIN), VITAMIN B1 (THIAMIN HYDROCHLORIDE).";
+            var correct = "ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID), VEGETABLE OIL (CONTAINS ONE OR MORE OF THE FOLLOWING: CANOLA OIL, CORN OIL, PALM OIL, SOYBEAN OIL), SALT, CONTAINS 2% OR LESS OF THE FOLLOWING: SODIUM BICARBONATE (LEAVENING), WHEAT GLUTEN, MALTED BARLEY FLOUR, YEAST.";
             var returned = model.Ingredients;
             Assert.AreEqual(correct, returned);
         }
@@ -48,17 +48,32 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void HasCorrectNumberOfNutrients()
         {
-            var correct = 20;
+            var correct = 17;
             var returned = model.Nutrients.Count();
             Assert.AreEqual(correct, returned);
-        } 
-         
+        }
 
-         
+        [TestMethod]
+        public void TotalFat()
+        {
+            var correct = 1.50m;
+            var returned = model.TotalFat;
+            Assert.AreEqual(correct, returned);
+        }
+
+
+        [TestMethod]
+        public void TotalFatDailyPercentage()
+        {
+            var correct = 2;
+            var returned = model.TotalFatPercentageDailyValue;
+            AcceptIfOffByOne(correct, returned);
+        }
+
         [TestMethod]
         public void Iron()
         {
-            var correct = 1.80M;  
+            var correct = 1.08m;
             var returned = model.Iron;
             Assert.AreEqual(correct, returned);
         }
@@ -66,16 +81,17 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void IronDailyPercentage()
         {
-            var correct = 10;
+            var correct = 4;
             var returned = model.IronPercentageDailyValue;
-            Assert.AreEqual(correct, returned); 
+            Assert.AreEqual(correct, returned);
+          //  AcceptIfOffByOne(correct, returned);
         }
 
 
         [TestMethod]
         public void ThiamineDailyPercentage()
         {
-            var correct = 10;
+            var correct = 0;
             var returned = model.ThiaminePercentageDailyValue;
             Assert.AreEqual(correct, returned);
         }
@@ -83,9 +99,10 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void FolicAcidDailyPercentage()
         {
-            var correct = 0;
-            var returned = model.ThiaminePercentageDailyValue;
+            var correct = 6;
+            var returned = model.FolicAcidPercentageDailyValue;
             Assert.AreEqual(correct, returned);
         }
+
     }
 }

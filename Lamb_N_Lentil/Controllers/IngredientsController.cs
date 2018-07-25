@@ -15,8 +15,6 @@ namespace Lamb_N_Lentil.UI.Controllers
 
         public readonly IUsdaAsync usdaAsync;
         public readonly IUsdaAsync usdaAsyncFoodReport;
-        //   private  UsdaFoodReportViewModel  vm;
-
 
         public IngredientsController()
         {
@@ -47,7 +45,7 @@ namespace Lamb_N_Lentil.UI.Controllers
         {
             var list = await usdaAsync.FetchUsdaFoodList(searchText);
             var vm = await ListOfFoodsViewModel.MapListOfSearchedFoodsToListOfFoods(list);
-            ViewBag.NoResults = "Foo";
+            ViewBag.NoResults = "";
             if (vm==null ||  vm.Total == 0)
             {
                 ViewBag.NoResults = "Nothing was found. Please refine your search.";

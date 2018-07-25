@@ -1,11 +1,7 @@
-﻿using System.Collections.Generic;
-using Lamb_N_Lentil.Domain;
-using Lamb_N_Lentil.UI.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Lamb_N_Lentil.Domain.UsdaInformation;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using System.Linq;
-using UsdaFR = Lamb_N_Lentil.Domain.UsdaInformation.UsdaFoodReport;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using _UsdaFoodReport = Lamb_N_Lentil.Domain.UsdaInformation.UsdaFoodReport;
 
 namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldReturnValidFullFoodReportFor
 {
@@ -19,7 +15,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldRet
             await FetchReport();
         } 
 
-        private async Task<UsdaFR> GetReport(string ndbno)
+        private async Task<_UsdaFoodReport> GetReport(string ndbno)
         {
             report = await usdaAsync.FetchUsdaFoodReport(ndbno);
             return report;

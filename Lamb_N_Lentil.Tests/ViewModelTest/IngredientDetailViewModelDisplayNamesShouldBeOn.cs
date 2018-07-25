@@ -1,18 +1,29 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using Lamb_N_Lentil.UI.Models;
+using _UsdaFoodReportViewModel=Lamb_N_Lentil.UI.Models.UsdaFoodReportViewModel;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lamb_N_Lentil.Tests.ViewModelTest
-{  /*
+{ 
     [TestClass]
     public class IngredientDetailViewModelDisplayNamesShouldBeOn
     {
         [TestMethod]
-        public void ShouldHaveCorrectDisplayNamePropertyOnSaturatedFat()
+        public void ShouldHaveCorrectDisplayNamePropertyOnUpdateDate()
         {
-            var pInfo = typeof(IngredientViewModel).GetProperty("SaturatedFat")
+            var pInfo = typeof(_UsdaFoodReportViewModel).GetProperty("UpdateDate")
+                                .GetCustomAttributes(typeof(DisplayAttribute), false)
+                                .Cast<DisplayAttribute>().FirstOrDefault();
+            var name = pInfo.Name;
+
+            Assert.AreEqual("Update Date", name);
+        }
+
+        [TestMethod]
+        public void ShouldHaveCorrectDisplayNamePropertyOnSaturatedFat()
+        { 
+            var pInfo = typeof(_UsdaFoodReportViewModel).GetProperty("SaturatedFat")
                                 .GetCustomAttributes(typeof(DisplayAttribute), false)
                                 .Cast<DisplayAttribute>().FirstOrDefault();
             var name = pInfo.Name;
@@ -20,10 +31,10 @@ namespace Lamb_N_Lentil.Tests.ViewModelTest
             Assert.AreEqual("Saturated Fat", name);
         }
 
-        [TestMethod]
+         [TestMethod]
         public void ShouldHaveCorrectDisplayNamePropertyOnTransFat()
         {
-            var pInfo = typeof(IngredientViewModel).GetProperty("TransFat")
+            var pInfo = typeof(_UsdaFoodReportViewModel).GetProperty("TransFat")
                                 .GetCustomAttributes(typeof(DisplayAttribute), false)
                                 .Cast<DisplayAttribute>().FirstOrDefault();
             var name = pInfo.Name;
@@ -34,7 +45,7 @@ namespace Lamb_N_Lentil.Tests.ViewModelTest
         [TestMethod]
         public void ShouldHaveCorrectDisplayNamePropertyOnPolyunsaturatedFat()
         {
-            var pInfo = typeof(IngredientViewModel).GetProperty("PolyunsaturatedFat")
+            var pInfo = typeof(_UsdaFoodReportViewModel).GetProperty("PolyunsaturatedFat")
                                 .GetCustomAttributes(typeof(DisplayAttribute), false)
                                 .Cast<DisplayAttribute>().FirstOrDefault();
             var name = pInfo.Name;
@@ -45,7 +56,7 @@ namespace Lamb_N_Lentil.Tests.ViewModelTest
         [TestMethod]
         public void ShouldHaveCorrectDisplayNamePropertyOnMonunsaturatedFat()
         {
-            var pInfo = typeof(IngredientViewModel).GetProperty("MonounsaturatedFat")
+            var pInfo = typeof(_UsdaFoodReportViewModel).GetProperty("MonounsaturatedFat")
                                 .GetCustomAttributes(typeof(DisplayAttribute), false)
                                 .Cast<DisplayAttribute>().FirstOrDefault();
             var name = pInfo.Name;
@@ -56,7 +67,7 @@ namespace Lamb_N_Lentil.Tests.ViewModelTest
         [TestMethod]
         public void ShouldHaveCorrectDisplayNamePropertyOnDietaryFiber()
         {
-            var pInfo = typeof(IngredientViewModel).GetProperty("DietaryFiber")
+            var pInfo = typeof(_UsdaFoodReportViewModel).GetProperty("DietaryFiber")
                                 .GetCustomAttributes(typeof(DisplayAttribute), false)
                                 .Cast<DisplayAttribute>().FirstOrDefault();
             var name = pInfo.Name;
@@ -67,7 +78,7 @@ namespace Lamb_N_Lentil.Tests.ViewModelTest
         [TestMethod]
         public void ShouldHaveCorrectDisplayNamePropertyOnVitaminA()
         {
-            var pInfo = typeof(IngredientViewModel).GetProperty("VitaminA")
+            var pInfo = typeof(_UsdaFoodReportViewModel).GetProperty("VitaminA")
                                 .GetCustomAttributes(typeof(DisplayAttribute), false)
                                 .Cast<DisplayAttribute>().FirstOrDefault();
             var name = pInfo.Name;
@@ -78,7 +89,7 @@ namespace Lamb_N_Lentil.Tests.ViewModelTest
         [TestMethod]
         public void ShouldHaveCorrectDisplayNamePropertyOnVitaminC()
         {
-            var pInfo = typeof(IngredientViewModel).GetProperty("VitaminC")
+            var pInfo = typeof(_UsdaFoodReportViewModel).GetProperty("VitaminC")
                                 .GetCustomAttributes(typeof(DisplayAttribute), false)
                                 .Cast<DisplayAttribute>().FirstOrDefault();
             var name = pInfo.Name;
@@ -89,7 +100,7 @@ namespace Lamb_N_Lentil.Tests.ViewModelTest
         [TestMethod]
         public void ShouldHaveCorrectDisplayNamePropertyOnVitaminD()
         {
-            var pInfo = typeof(IngredientViewModel).GetProperty("VitaminD")
+            var pInfo = typeof(_UsdaFoodReportViewModel).GetProperty("VitaminD")
                                 .GetCustomAttributes(typeof(DisplayAttribute), false)
                                 .Cast<DisplayAttribute>().FirstOrDefault();
             var name = pInfo.Name;
@@ -100,7 +111,7 @@ namespace Lamb_N_Lentil.Tests.ViewModelTest
         [TestMethod]
         public void ShouldHaveCorrectDisplayNamePropertyOnThiamine()
         {
-            var pInfo = typeof(IngredientViewModel).GetProperty("Thiamine")
+            var pInfo = typeof(_UsdaFoodReportViewModel).GetProperty("Thiamine")
                                 .GetCustomAttributes(typeof(DisplayAttribute), false)
                                 .Cast<DisplayAttribute>().FirstOrDefault();
             var name = pInfo.Name;
@@ -111,7 +122,7 @@ namespace Lamb_N_Lentil.Tests.ViewModelTest
         [TestMethod]
         public void ShouldHaveCorrectDisplayNamePropertyOnRiboflavin()
         {
-            var pInfo = typeof(IngredientViewModel).GetProperty("Riboflavin")
+            var pInfo = typeof(_UsdaFoodReportViewModel).GetProperty("Riboflavin")
                                 .GetCustomAttributes(typeof(DisplayAttribute), false)
                                 .Cast<DisplayAttribute>().FirstOrDefault();
             var name = pInfo.Name;
@@ -122,18 +133,19 @@ namespace Lamb_N_Lentil.Tests.ViewModelTest
         [TestMethod]
         public void ShouldHaveCorrectDisplayNamePropertyOnNiacin()
         {
-            var pInfo = typeof(IngredientViewModel).GetProperty("Niacin")
+            var foo = typeof(_UsdaFoodReportViewModel).GetProperty("Niacin");
+            var pInfo = typeof(_UsdaFoodReportViewModel).GetProperty("Niacin")
                                 .GetCustomAttributes(typeof(DisplayAttribute), false)
                                 .Cast<DisplayAttribute>().FirstOrDefault();
             var name = pInfo.Name;
 
-            Assert.AreEqual("Niacin (Vitamin B-3)", name);
+            Assert.AreEqual("Niacin(Vitamin B-3)", name);
         }
 
         [TestMethod]
         public void ShouldHaveCorrectDisplayNamePropertyOnVitaminB6()
         {
-            var pInfo = typeof(IngredientViewModel).GetProperty("VitaminB6")
+            var pInfo = typeof(_UsdaFoodReportViewModel).GetProperty("VitaminB6")
                                 .GetCustomAttributes(typeof(DisplayAttribute), false)
                                 .Cast<DisplayAttribute>().FirstOrDefault();
             var name = pInfo.Name;
@@ -144,7 +156,7 @@ namespace Lamb_N_Lentil.Tests.ViewModelTest
         [TestMethod]
         public void ShouldHaveCorrectDisplayNamePropertyOnVitaminB12()
         {
-            var pInfo = typeof(IngredientViewModel).GetProperty("VitaminB12")
+            var pInfo = typeof(_UsdaFoodReportViewModel).GetProperty("VitaminB12")
                                 .GetCustomAttributes(typeof(DisplayAttribute), false)
                                 .Cast<DisplayAttribute>().FirstOrDefault();
             var name = pInfo.Name;
@@ -155,12 +167,12 @@ namespace Lamb_N_Lentil.Tests.ViewModelTest
         [TestMethod]
         public void ShouldHaveCorrectDisplayNamePropertyOnFolicAcid2()
         {
-            var pInfo = typeof(IngredientViewModel).GetProperty("FolicAcid")
+            var pInfo = typeof(_UsdaFoodReportViewModel).GetProperty("FolicAcid")
                                 .GetCustomAttributes(typeof(DisplayAttribute), false)
                                 .Cast<DisplayAttribute>().FirstOrDefault();
             var name = pInfo.Name;
 
             Assert.AreEqual("Folic Acid", name);
-        }
-    }   */
+        }  
+    }
 }

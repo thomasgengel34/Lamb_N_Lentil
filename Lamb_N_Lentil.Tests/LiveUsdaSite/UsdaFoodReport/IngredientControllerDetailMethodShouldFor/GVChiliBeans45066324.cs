@@ -46,6 +46,14 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         }
 
         [TestMethod]
+        public void HasCorrectUpdateDate()
+        {
+            var correct = "07/14/2017";
+            var returned = model.UpdateDate; 
+            Assert.AreEqual(correct, returned);
+        }
+
+        [TestMethod]
         public void HasCorrectNumberOfNutrients()
         {
             var correct = 17;
@@ -171,8 +179,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         {
             var correct = 8;
             var returned = model.IronPercentageDailyValue;
-            Assert.AreEqual(correct, returned);
-            //AcceptIfOffByOne(correct, returned);
+            Assert.AreEqual(correct, returned); 
         }
 
         [TestMethod]

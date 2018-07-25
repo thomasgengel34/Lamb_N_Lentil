@@ -1,4 +1,4 @@
-﻿using System;
+﻿//using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -67,7 +67,8 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldRet
             var result = from r in report.foods[0].food.nutrients
                          where r.name == "Energy"
                          select r.measures[0].value;
-           var returned  = Convert.ToInt16(result.First());
+           var returned  = result.First() ;
+          // var returned  = Convert.ToInt16(result.First());
             Assert.AreEqual(correct, returned);
         }
     }   

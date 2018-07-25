@@ -69,6 +69,22 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
             var correct = 4;
             var returned = model.IronPercentageDailyValue;
             Assert.AreEqual(correct, returned); 
-        } 
+        }
+
+        [TestMethod]
+        public void ThiamineDailyPercentage()
+        {
+            var correct = 0;
+            var returned = model.ThiaminePercentageDailyValue;
+            Assert.AreEqual(correct, returned);
+        }
+
+        [TestMethod]
+        public void FolicAcidDailyPercentage()
+        {
+            var correct = 0;
+            var returned = model.ThiaminePercentageDailyValue;
+            Assert.AreEqual(correct, returned);
+        }
     }
 }

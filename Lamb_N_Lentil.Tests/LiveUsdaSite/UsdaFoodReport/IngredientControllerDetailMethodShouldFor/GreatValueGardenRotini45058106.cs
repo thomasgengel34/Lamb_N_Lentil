@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDetailMethodShouldFor
 {
     [TestClass]
-    public class  UnfrostedBrownSugarCinammonToasterPastries45309980 : IngredientControllerDetailMethodShould
+    public class  GreatValueGardenRotini45058106 : IngredientControllerDetailMethodShould
     { 
 
         [TestInitialize]
         public new async Task Start()
         {
             Controller = new IngredientsController(null, usdaAsync, usdaAsyncFoodReport);
-            searchText = "45309980";
+            searchText = "45058106";
             viewResult = await Controller.Details(searchText);
             model = (UsdaFoodReportViewModel)viewResult.Model;
         }
@@ -32,7 +32,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void HaveName()
         { 
-            var correct = "TOASTER PASTRIES, UPC: 038000301100";
+            var correct = "GARDEN ROTINI, UPC: 078742228679";
             var returned = model.Description;
             Assert.AreEqual(correct, returned);
         }
@@ -40,7 +40,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void HaveIngredients()
         { 
-            var correct = "ENRICHED FLOUR (WHEAT FLOUR, NIACIN, REDUCED IRON, VITAMIN B1 [THIAMIN MONONITRATE], VITAMIN B2 [RIBOFLAVIN], FOLIC ACID), SOYBEAN AND PALM OIL (WITH TBHQ FOR FRESHNESS), SUGAR, CORN SYRUP, DEXTROSE, HIGH FRUCTOSE CORN SYRUP, CRACKER MEAL, CONTAINS TWO PERCENT OR LESS OF MOLASSES, SALT, CALCIUM CARBONATE, LEAVENING (BAKING SODA, SODIUM ACID PYROPHOSPHATE, MONOCALCIUM PHOSPHATE), CINNAMON, WHEAT STARCH, SOY LECITHIN, VITAMIN A PALMITATE, NIACINAMIDE, REDUCED IRON, VITAMIN B6 (PYRIDOXINE HYDROCHLORIDE), VITAMIN B2 (RIBOFLAVIN), VITAMIN B1 (THIAMIN HYDROCHLORIDE).";
+            var correct = "SEMOLINA, DURUM FLOUR, SPINACH POWDER, TOMATO POWDER, NIACIN, FERROUS SULFATE (IRON), THIAMINE MONONITRATE, RIBOFLAVIN, FOLIC ACID.";
             var returned = model.Ingredients;
             Assert.AreEqual(correct, returned);
         }
@@ -51,10 +51,8 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
             var correct = 20;
             var returned = model.Nutrients.Count();
             Assert.AreEqual(correct, returned);
-        } 
-         
+        }  
 
-         
         [TestMethod]
         public void Iron()
         {
@@ -70,12 +68,11 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
             var returned = model.IronPercentageDailyValue;
             Assert.AreEqual(correct, returned); 
         }
-
-
+         
         [TestMethod]
         public void ThiamineDailyPercentage()
         {
-            var correct = 10;
+            var correct = 35;
             var returned = model.ThiaminePercentageDailyValue;
             Assert.AreEqual(correct, returned);
         }
@@ -83,8 +80,8 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void FolicAcidDailyPercentage()
         {
-            var correct = 0;
-            var returned = model.ThiaminePercentageDailyValue;
+            var correct = 25;
+            var returned = model.FolicAcidPercentageDailyValue;
             Assert.AreEqual(correct, returned);
         }
     }

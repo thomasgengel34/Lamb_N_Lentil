@@ -1,10 +1,9 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldReturnValidFullFoodReportFor
-{   
+{
     [TestClass]
     public class LiveUsdaAsyncShouldReturnValidFoodReportForMildDicedTomatoesWithGreenChilies45355854 : LiveUsdaSiteTestSetup
     {
@@ -30,14 +29,15 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldRet
         public void WithCorrectName()
         {
             var correct  = "MILD DICED TOMATOES WITH GREEN CHILIES, UPC: 078742002170";
-
-            Assert.AreEqual(correct, report.foods[0].food.desc.name);
+            var returned = report.foods[0].food.desc.name;
+            Assert.AreEqual(correct, returned );
         }
 
         [TestMethod]
         public void WithCorrectNdbno()
         {
-            Assert.AreEqual(Ndbno, report.foods[0].food.desc.ndbno);
+            var returned = report.foods[0].food.desc.ndbno;
+            Assert.AreEqual(Ndbno,returned);
         }
 
 
@@ -55,7 +55,8 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldRet
         public void HasCorrectServingSizeForFirstNutrient()
         {
             var correct = 0.5M;
-            Assert.AreEqual(correct, report.foods[0].food.nutrients[0].measures[0].qty);
+            var returned = report.foods[0].food.nutrients[0].measures[0].qty;
+            Assert.AreEqual(correct, returned );
         }
 
 
@@ -66,7 +67,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldRet
             var result = from r in report.foods[0].food.nutrients
                          where r.name == "Energy"
                          select r.measures[0].value;
-            var returned  = Convert.ToInt16(result.First());
+              var returned  = result.First() ; 
             Assert.AreEqual(correct, returned);
         }
 

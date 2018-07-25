@@ -1,10 +1,9 @@
-﻿using Lamb_N_Lentil.Domain.UsdaInformation;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldReturnValidFullFoodReportFor
-{    
+{
     [TestClass]
     public class  BrownAndServeBreakfastPatty45133988 :  LiveUsdaSiteTestSetup
     {    
@@ -19,27 +18,31 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldRet
         public void HasCorrectName()
         {
             var correct = "BANQUET Brown N Serve Original Patty, UNPREPARED, GTIN: 00031000184643";
-            Assert.AreEqual(correct, report.foods[0].food.desc.name);
+            var returned = report.foods[0].food.desc.name;
+            Assert.AreEqual(correct, returned);
         }
 
         [TestMethod]
         public void HasCorrectNdbno()
         {
-            Assert.AreEqual(Ndbno, report.foods[0].food.desc.ndbno);
+            var returned = report.foods[0].food.desc.ndbno;
+            Assert.AreEqual(Ndbno, returned);
         }
 
         [TestMethod]
         public void HasCorrectUnitForFirstNutrient()
         {
             var correct = "kcal";
-            Assert.AreEqual(correct, report.foods[0].food.nutrients[0].unit);
+            var returned = report.foods[0].food.nutrients[0].unit;
+            Assert.AreEqual(correct, returned );
         }
 
         [TestMethod]
         public void HasCorrectServingSizeForFirstNutrient()
         {
             var correct = 0.0M;
-            Assert.AreEqual(correct, report.foods[0].food.nutrients[0].qty);
+            var returned = report.foods[0].food.nutrients[0].qty;
+            Assert.AreEqual(correct, returned);
         }
 
 
