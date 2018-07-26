@@ -66,7 +66,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void IronDailyPercentage()
         {
-            var correct = 10;
+            var correct = 9;  // round 1.79 to 2; 2/18=9
             var returned = model.IronPercentageDailyValue;
             Assert.AreEqual(correct, returned); 
         } 

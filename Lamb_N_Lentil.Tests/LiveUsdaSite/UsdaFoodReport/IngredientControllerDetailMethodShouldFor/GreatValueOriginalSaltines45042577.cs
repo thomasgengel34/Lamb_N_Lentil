@@ -73,7 +73,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void Iron()
         {
-            var correct = 1.08m;
+            var correct = 1.08m;  // db
             var returned = model.Iron;
             Assert.AreEqual(correct, returned);
         }
@@ -81,7 +81,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void IronDailyPercentage()
         {
-            var correct = 4;
+            var correct = 6;    // box has 4
             var returned = model.IronPercentageDailyValue;
             Assert.AreEqual(correct, returned);
           //  AcceptIfOffByOne(correct, returned);
@@ -99,7 +99,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void FolicAcidDailyPercentage()
         {
-            var correct = 6;
+            var correct = 0;   // box has 6
             var returned = model.FolicAcidPercentageDailyValue;
             Assert.AreEqual(correct, returned);
         }

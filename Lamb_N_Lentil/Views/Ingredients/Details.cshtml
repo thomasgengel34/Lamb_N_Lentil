@@ -6,7 +6,7 @@
 <div class="IngredientsDetails">
 
     <h1> @Html.DisplayFor(model => model.Description) </h1>  <p>Values shown may vary from those shown on the container. The values shown here are from the database. It is possible the container was not updated or values may vary due to rounding.</p>
-    <div id="NutritionLabel">
+    <div class="NutritionLabel">
         <h1>Nutrition Facts</h1>
         <p>
             @Html.DisplayNameFor(m => m.ServingSize) @Html.DisplayFor(m => m.ServingSize)
@@ -133,19 +133,20 @@
         <div class="thinHR"></div>
         <div>  *Percent Daily Values are based on a 2,000 calorie diet.Your daily values may be higher or lower depending on your calorie needs.</div>
     </div>
-    </div>
-<div class="IngredientsDetails row">
+</div>
+<div class="NutritionLabel">
     <h2>All Nutrients</h2>
     @if (Model != null && Model.Nutrients != null)
     {
         foreach (var nutrient in Model.Nutrients)
-        {
-            <div class="col-sm-6">  @Html.DisplayFor(n => nutrient.Name)</div>
-            <div class="col-sm-6"> @Html.DisplayFor(n => nutrient.Measures.First().Value)@Html.DisplayFor(n => nutrient.Unit)    </div> 
-                }
-                }
+        {<div class="row">
+                <div class="col-sm-6">  @Html.DisplayFor(n => nutrient.Name)</div>
+                <div class="col-sm-6"> @Html.DisplayFor(n => nutrient.Measures.First().Value)@Html.DisplayFor(n => nutrient.Unit)    </div>
             </div>
+        }
+    }
+</div>
 
 
 
-            @*<p>style from  https://www.google.com/search?q=nutrition+facts+for+turkey+sausage&oq=nutrition&aqs=chrome.0.69i59j69i57j69i59j0l3.3343j0j7&sourceid=chrome&ie=UTF-8</p>  but this is out of date.  *@
+@*<p>style from  https://www.google.com/search?q=nutrition+facts+for+turkey+sausage&oq=nutrition&aqs=chrome.0.69i59j69i57j69i59j0l3.3343j0j7&sourceid=chrome&ie=UTF-8</p>  but this is out of date.  *@

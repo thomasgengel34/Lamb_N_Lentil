@@ -123,11 +123,12 @@
     <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientControllerShowResultslMethodShouldForUnfrostedCinammonPopTarts.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientControllerShowResultsMethodShould.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientControllerShowResultslMethodShouldForDicedPeaches.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\FatFreeRefriedBeans45066323.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\GreatValuePorkAndBeansInTomatoSauce45056553.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\PillsburyGrandsJuniorsSouthernHomestyle45237923.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\BearCreekVegetableBeefBeefFlavoredSoupMix45089083.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\GreatValueGreatNorthernBeans45056536.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\GVDarkRedKidneyBeans45056370.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\GreatValueDarkRedKidneyBeans45056370.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\CheezItGroovesCrackerChipsSharpWhiteCheddar45252231.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\MinisCrackers45309635.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\UnfrostedBrownSugarCinammonToasterPastries45309980.cs" />

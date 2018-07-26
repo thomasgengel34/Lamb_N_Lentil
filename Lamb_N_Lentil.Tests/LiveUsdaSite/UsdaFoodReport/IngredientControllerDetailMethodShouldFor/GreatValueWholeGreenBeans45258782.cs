@@ -99,7 +99,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void FolicAcidDailyPercentage()
         {
-            var correct = 6;
+            var correct = 0;  // label says 6%
             var returned = model.FolicAcidPercentageDailyValue;
             Assert.AreEqual(correct, returned);
         }

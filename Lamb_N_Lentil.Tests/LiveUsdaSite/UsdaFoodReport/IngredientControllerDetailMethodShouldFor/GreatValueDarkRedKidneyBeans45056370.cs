@@ -1,7 +1,5 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using System.Web.Mvc;
-using Lamb_N_Lentil.Domain.UsdaInformation;
 using Lamb_N_Lentil.UI.Controllers;
 using Lamb_N_Lentil.UI.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -9,7 +7,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDetailMethodShouldFor
 {
     [TestClass]
-    public class GVDarkRedKidneyBeans45056370 : IngredientControllerDetailMethodShould
+    public class GreatValueDarkRedKidneyBeans45056370 : IngredientControllerDetailMethodShould
     { 
 
         [TestInitialize]
@@ -57,7 +55,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void Iron()
         {
-            var correct = 1.79M;
+            var correct = 1.79M;   // db
             var returned = model.Iron;
             Assert.AreEqual(correct, returned);
         }
@@ -65,7 +63,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void IronDailyPercentage()
         {
-            var correct = 10;
+            var correct = 9;  // round 1.79 to 2, 9
             var returned = model.IronPercentageDailyValue;
             Assert.AreEqual(correct, returned);
         }

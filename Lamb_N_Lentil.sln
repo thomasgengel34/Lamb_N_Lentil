@@ -20,20 +20,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample USDA Json Files", "S
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reports", "Reports", "{4EF1B80D-A9D2-4CBE-ABAA-CB8BBBBDE416}"
 	ProjectSection(SolutionItems) = preProject
-		01009CheddarCheeseFullReport.json = 01009CheddarCheeseFullReport.json
-		45066324GVChiliBeans.json = 45066324GVChiliBeans.json
-		45169419OrganicPepperSauceBasicReport.json = 45169419OrganicPepperSauceBasicReport.json
-		45169419OrganicPepperSauceFullReport.json = 45169419OrganicPepperSauceFullReport.json
 		4518498.json = 4518498.json
+		CheddarCheeseFullReport01009.json = CheddarCheeseFullReport01009.json
 		FoodsYellowClingPeachesBrandedWithIngredients.json = FoodsYellowClingPeachesBrandedWithIngredients.json
+		GreatValueFatFreeBeans45066323.json = GreatValueFatFreeBeans45066323.json
+		GreatValueOriginalSaltines4502577.json = GreatValueOriginalSaltines4502577.json
+		GVChiliBeans45066324.json = GVChiliBeans45066324.json
 		GVChiliBeansInTomatoSauce.json = GVChiliBeansInTomatoSauce.json
+		GVGardenRotini.json = GVGardenRotini.json
 		MildDicedTomatoesWithGreenChilies45355854.json = MildDicedTomatoesWithGreenChilies45355854.json
 		MinuteMaidLightLemonade.json = MinuteMaidLightLemonade.json
+		OrganicPepperSauceBasicReport45169419.json = OrganicPepperSauceBasicReport45169419.json
+		OrganicPepperSauceFullReport45169419.json = OrganicPepperSauceFullReport45169419.json
 		SampleUSDABrandedReport.json = SampleUSDABrandedReport.json
 		SampleUSDAStandardReport.json = SampleUSDAStandardReport.json
 		Spumoni45322307FullReport.json = Spumoni45322307FullReport.json
 		ThreeIngredientsOnUsdaSiteReport.json = ThreeIngredientsOnUsdaSiteReport.json
 		WhiteHominyFullReport.json = WhiteHominyFullReport.json
+		WholeGreenBean.json = WholeGreenBean.json
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Searches", "Searches", "{DE577B84-4D20-4112-847E-A181DFEB9006}"
