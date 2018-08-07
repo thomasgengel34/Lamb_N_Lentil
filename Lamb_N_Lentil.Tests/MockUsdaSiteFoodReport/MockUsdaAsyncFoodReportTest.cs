@@ -8,52 +8,47 @@ namespace Lamb_N_Lentil.Tests.MockUsdaSiteFoodReport
     [TestClass]
     public class MockUsdaAsyncFoodReportTest : MockUsdaAsyncForFoodReport
     {
-        IUsdaAsync usdaAsyncFoodReport;
+        IUsdaAsync usdaAsyncFoodReport; 
 
-        public MockUsdaAsyncFoodReportTest()
+        [TestInitialize]
+        public async Task Start()
         {
             usdaAsyncFoodReport = new MockUsdaAsyncForFoodReport();
+            var testString = "ShouldReturnIngredients";
+            report = await usdaAsyncFoodReport.FetchUsdaFoodReport(testString);
         }
 
-        [TestMethod]
-        public async Task ReturnValueInFoodReport()
-        {
-            string testString = "ShouldReturnIngredients";
-            decimal correct = 654.2M;
-            UsdaFoodReport report = await usdaAsyncFoodReport.FetchUsdaFoodReport(testString);
 
-            decimal returned = report.foods.First().food.nutrients[0].measures[0].value;
+        [TestMethod]
+        public void ReturnValueInFoodReport()
+        { 
+            var correct = 654.2M; 
+            var returned = report.foods.First().food.nutrients[0].measures[0].value;
             Assert.AreEqual(correct, returned);
         }
 
 
         [TestMethod]
-        public async Task ReturnManufacturer()
-        {
-            string testString = "ShouldReturnIngredients";
-            string correct = "default manufacturer";
-            UsdaFoodReport report = await usdaAsyncFoodReport.FetchUsdaFoodReport(testString);
-            string returned = report.foods.First().food.desc.manu;
+        public void ReturnManufacturer()
+        { 
+            var correct = "default manufacturer"; 
+            var returned = report.foods.First().food.desc.manu;
             Assert.AreEqual(correct, returned);
         }
 
         [TestMethod]
-        public async Task ReturnFoodGroup()
-        {
-            string testString = "ShouldReturnIngredients";
-            string correct = "default food group";
-            UsdaFoodReport report = await usdaAsyncFoodReport.FetchUsdaFoodReport(testString);
-            string returned = report.foods.First().food.desc.fg;
+        public void ReturnFoodGroup()
+        { 
+            var correct = "default food group"; 
+            var returned = report.foods.First().food.desc.fg;
             Assert.AreEqual(correct, returned);
         }
 
         [TestMethod]
-        public async Task ReturnServingSize()
-        {
-            string testString = "ShouldReturnIngredients";
-           decimal correct = 1.0101M;
-            UsdaFoodReport report = await usdaAsyncFoodReport.FetchUsdaFoodReport(testString);
-            decimal returned = report.foods.First().food.nutrients.First().measures.First().qty; 
+        public void ReturnServingSize()
+        { 
+            var correct = 1.0101M; 
+            decimal returned = report.foods.First().food.nutrients.First().measures.First().qty;
             Assert.AreEqual(correct, returned);
         }
     }

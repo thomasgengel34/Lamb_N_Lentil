@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDetailMethodShouldFor
 {
     [TestClass]
-    public class FatFreeRefriedBeans45066323 : IngredientControllerDetailMethodShould
+    public class GreatValueFatFreeRefriedBeans45066323 : IngredientControllerDetailMethodShould
     { 
 
         [TestInitialize]
@@ -110,6 +110,6 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
             var returned = model.UpdateDate;
             Assert.AreEqual(correct, returned);
         }
-
+         
     }
 }

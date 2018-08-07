@@ -35,7 +35,15 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodList
             var returned = model.FoodItems;
             Assert.IsNull( returned);
         }
-     
-        
+
+
+        [TestMethod]
+        public void HaveCorrectServingSize()
+        {
+            var correct = "";
+            var returned = model.FoodItems;     // model.FoodItems.First().ServingSize;
+                                                // Assert.AreEqual(correct, returned);
+            Assert.IsNull(returned);
+        }
     }
 }

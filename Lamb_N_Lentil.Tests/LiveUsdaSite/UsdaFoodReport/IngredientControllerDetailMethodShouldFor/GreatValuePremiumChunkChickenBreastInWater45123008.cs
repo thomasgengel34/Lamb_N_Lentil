@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDetailMethodShouldFor
 {
     [TestClass]
-    public class GVPremiumChunkChickenBreastInWater45123008 : IngredientControllerDetailMethodShould
+    public class GreatValuePremiumChunkChickenBreastInWater45123008 : IngredientControllerDetailMethodShould
     { 
 
         [TestInitialize]

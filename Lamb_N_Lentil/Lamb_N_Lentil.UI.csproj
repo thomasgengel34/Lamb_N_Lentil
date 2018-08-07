@@ -226,10 +226,6 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Lamb_N_Lentil.Business\Lamb_N_Lentil.Business.csproj">
-      <Project>{1661b65d-683c-44bc-b4b7-3817d5b70b34}</Project>
-      <Name>Lamb_N_Lentil.Business</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Lamb_N_Lentil.Domain\Lamb_N_Lentil.Domain.csproj">
       <Project>{9a81fa92-bf05-4ee6-a9e8-a774fe9cb062}</Project>
       <Name>Lamb_N_Lentil.Domain</Name>
@@ -256,7 +252,9 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55882</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/Lamb_N_Lentil.UI</IISUrl>
+          <IISUrl>http://localhost/Lamb_N_Lentil.UI_100</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost/Lamb_N_Lentil.UI</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDetailMethodShouldFor
 {
     [TestClass]
-    public class  GVChilBeans45066324 : IngredientControllerDetailMethodShould
+    public class  GreatValueChilBeans45066324 : IngredientControllerDetailMethodShould
     { 
 
         [TestInitialize]

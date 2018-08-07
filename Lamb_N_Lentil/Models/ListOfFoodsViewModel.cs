@@ -1,12 +1,11 @@
-﻿using Lamb_N_Lentil.Domain.UsdaInformation;
-using Lamb_N_Lentil.Domain.UsdaInformation.List;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Lamb_N_Lentil.Domain.UsdaInformation;
+using Lamb_N_Lentil.Domain.UsdaInformation.List;
 using _UsdaFoodReport = Lamb_N_Lentil.Domain.UsdaInformation.UsdaFoodReport;
-using System.Reflection;
 
 namespace Lamb_N_Lentil.UI.Models
 {
@@ -29,24 +28,24 @@ namespace Lamb_N_Lentil.UI.Models
 
                 foreach (var item in list.item)
                 {
-                    UsdaFoodReport report = await new UsdaAsync().FetchUsdaFoodReport(item.ndbno);
+                           _UsdaFoodReport report = await new UsdaAsync().FetchUsdaFoodReport(item.ndbno);
 
-                    FoodItem foodItem = new FoodItem()
-                    {
-                        Name = item.name,
-                        Ndbno = item.ndbno,
-                        Ingredients = report.foods.First().food.ing.desc,
-                        ServingSize = GetServingSize(report),
-                        MakerOrFoodGroup = FetchMakerOrFoodGroup(report),
-                    };
+                           FoodItem foodItem = new FoodItem()
+                           {
+                               Name = item.name,
+                                Ndbno = item.ndbno,
+                              Ingredients = report.foods.First().food.ing.desc,
+                                ServingSize = GetServingSize(report),
+                               MakerOrFoodGroup = FetchMakerOrFoodGroup(report),
+                            };
 
-                    vm.FoodItems.Add(foodItem);
-                };
+                          vm.FoodItems.Add(foodItem);
+                }
             }
             return vm;
         }
 
-        private static string FetchMakerOrFoodGroup(UsdaFoodReport report)
+        private static string FetchMakerOrFoodGroup(_UsdaFoodReport report)
         {
             string foodGroup = report.foods.First().food.desc.fg ?? "";
             string maker = report.foods.First().food.desc.manu ?? "";
@@ -60,37 +59,17 @@ namespace Lamb_N_Lentil.UI.Models
         private static string GetServingSize(_UsdaFoodReport report)
         {
             string serving = "";
-            if (report.foods.First() == null) return serving;
-            if (report.foods.First().food == null) return serving;
-            if (report.foods.First().food.nutrients == null) return serving;
-            if (report.foods.First().food.nutrients.First() == null) return serving;
-            if (report.foods.First().food.nutrients.First().measures == null) return serving;
-            var x = report.foods.First().food.nutrients.First().measures;
-            Type type = x.GetType();
-            if (type==typeof(Array))
+            if (report.foods.First().food.nutrients.First().measures.Count()==0)
             {
-                serving= report.foods.First().food.nutrients.First().measures[0].label  ;
+                var foo = report.foods.First().food.nutrients.First().measures;
+                return serving;
             }
-            
 
-            //var x1 = report;
-            //var x2 = report.foods;
-            //var x3 = x2.First();
-            //var x4 = x3.food;
-            //var x5 = x4.nutrients;
-            //var x6 = x5.First();
-            //var x7 = x6.measures;
-            //var x8 = x7.First();
-            // var x9 = x8.label;
-
-            //   serving = report.foods.First().food.nutrients.First().measures.First().label;
-
+            if (report.foods.First().food.nutrients.First().measures[0].label != null)
+            {
+                serving = report.foods.First().food.nutrients.First().measures[0].label;
+            }
             return serving;
-        }
-
-        private static string GetIngredients(string ndbno)
-        {
-            throw new NotImplementedException();
         }
     }
 

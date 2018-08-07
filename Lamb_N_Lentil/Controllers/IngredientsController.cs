@@ -43,10 +43,10 @@ namespace Lamb_N_Lentil.UI.Controllers
 
         public async Task<ActionResult> ShowResults(string searchText)
         {
-            var list = await usdaAsync.FetchUsdaFoodList(searchText);
-            var vm = await ListOfFoodsViewModel.MapListOfSearchedFoodsToListOfFoods(list);
+             var list = await usdaAsync.FetchUsdaFoodList(searchText);
+             var vm = await ListOfFoodsViewModel.MapListOfSearchedFoodsToListOfFoods(list);
             ViewBag.NoResults = "";
-            if (vm==null ||  vm.Total == 0)
+            if (vm == null || vm.Total == 0)
             {
                 ViewBag.NoResults = "Nothing was found. Please refine your search.";
             }
@@ -54,7 +54,7 @@ namespace Lamb_N_Lentil.UI.Controllers
             {
                 ViewBag.NoResults = "";
             }
-            return View(UIType.Index.ToString(), vm);
+            return View(UIType.Index.ToString(), vm); 
         }
 
         public async Task<ViewResult> Details(string ndbno)

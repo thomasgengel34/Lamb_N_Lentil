@@ -4,9 +4,7 @@
 @model ListOfFoodsViewModel
 
 @{
-    ViewBag.Title = "Index";
-    IList<SelectListItem> ulist = EnumHelper.GetSelectList(typeof(UsdaDataSource));
-    List<SelectListItem> list = (List<SelectListItem>)ulist;
+    ViewBag.Title = "Index"; 
 }
 <div id="IngredientsIndex">
     <h1>Search For Ingredients</h1>

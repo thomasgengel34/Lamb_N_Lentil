@@ -16,19 +16,7 @@ namespace Lamb_N_Lentil.Tests.MockUsdaAsyncSiteFoodList
 
         public async Task<List<FoodItem>> GetListOfIngredientsFromTextSearch(string searchString, string description)
         {
-            string sampleManufacturerOrFoodGroup = "";
-            if (description == "" || description == UsdaDataSource.Both.ToString())
-            {
-                sampleManufacturerOrFoodGroup = "Sample Manufacturer Or Food Group For Empty String";
-            }
-            if (description == UsdaDataSource.BrandedFoodProducts.ToString())
-            {
-                sampleManufacturerOrFoodGroup = "Sample Manufacturer Or Food Group For Branded Products String";
-            }
-            if (description == UsdaDataSource.StandardReference.ToString())
-            {
-                sampleManufacturerOrFoodGroup = "Sample Manufacturer Or Food Group For Standard String";
-            }
+            string sampleManufacturerOrFoodGroup = ""; 
 
             await Task.Delay(0);
             List<FoodItem> list = new List<FoodItem>();

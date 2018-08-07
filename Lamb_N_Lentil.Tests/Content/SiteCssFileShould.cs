@@ -205,7 +205,7 @@ h2.no_results {
 }
 
 /* Nutrition Label - begin*/
-#NutritionLabel {
+.NutritionLabel {
     border: solid black 1px;
     background: white;
     padding: 1%;
@@ -216,7 +216,7 @@ h2.no_results {
     margin: 0 5px 0 5px;
 }
 
-    #NutritionLabel h1 {
+    .NutritionLabel h1 {
         font-size: 25px;
         font-weight: 800;
         padding-bottom: 0;
@@ -224,14 +224,14 @@ h2.no_results {
         border-bottom: 0;
     }
 
-    #NutritionLabel p:first-of-type {
+    .NutritionLabel p:first-of-type {
         padding-top: 0;
         margin-top: 0;
         border-top: 0;
     }
 
 
-    #NutritionLabel .thickHR {
+    .NutritionLabel .thickHR {
         height: 25px;
         width: 100%;
         background-color: black;
@@ -239,7 +239,7 @@ h2.no_results {
         padding-top: 0;
     }
 
-    #NutritionLabel .mediumHR {
+    .NutritionLabel .mediumHR {
         height: 10px;
         width: 100%;
         background-color: black;
@@ -248,7 +248,7 @@ h2.no_results {
     }
 
 
-    #NutritionLabel .thinHR {
+    .NutritionLabel .thinHR {
         height: 2px;
         width: 100%;
         background-color: black;
@@ -258,27 +258,27 @@ h2.no_results {
     }
 
 
-    #NutritionLabel > div {
+    .NutritionLabel > div {
         width: 100%;
     }
 
-    #NutritionLabel h1, #NutritionLabel h2, #NutritionLabel p {
+    .NutritionLabel h1, .NutritionLabel h2, .NutritionLabel p {
         background: white;
         padding: 1%;
         font-family: Arial;
         color: black;
     }
 
-    #NutritionLabel .bold {
+    .NutritionLabel .bold {
         font-weight: 800;
     }
 
-    #NutritionLabel .indented {
+    .NutritionLabel .indented {
         padding-left: 5%;
     }
 
 
-    #NutritionLabel .right {
+    .NutritionLabel .right {
         display: block;
         float: right;
     }

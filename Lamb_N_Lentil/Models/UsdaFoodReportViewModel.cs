@@ -88,7 +88,7 @@ namespace Lamb_N_Lentil.UI.Models
 
         public decimal Iron { get; set; }
         public string IronUnit { get; set; }
-        public int IronPercentageDailyValue { get; set; }
+        public decimal IronPercentageDailyValue { get; set; }
 
         [Display(Name = "Thiamine (Vitamin B-1)")]
         public decimal Thiamine { get; set; }
@@ -216,7 +216,7 @@ namespace Lamb_N_Lentil.UI.Models
                     vm.Iron = GetNutrientValue(vm, food, 303);
                     vm.IronUnit = GetNutrientUnit(vm, food, 303);
                     vm.IronPercentageDailyValue = Decimal.ToInt16(100 * vm.Iron / 18);
-
+                   
                     vm.Thiamine = GetNutrientValue(vm, food, 404);
                     vm.ThiamineUnit = GetNutrientUnit(vm, food, 404);
                     vm.ThiaminePercentageDailyValue = Decimal.ToInt16(100 * vm.Thiamine / 1.5M);
@@ -281,12 +281,14 @@ namespace Lamb_N_Lentil.UI.Models
             List<Nutrient> nutrients = new List<Nutrient>();
             foreach (var item in food.nutrients)
             {
-                Nutrient nutrient = new Nutrient();
-                nutrient.ID = item.nutrient_id;
-                nutrient.Name = item.name;
-                nutrient.Unit = item.unit;
-                nutrient.Value = item.value;
-                nutrient.Measures = GetListMeasure(item.measures);
+                Nutrient nutrient = new Nutrient
+                {
+                    ID = item.nutrient_id,
+                    Name = item.name,
+                    Unit = item.unit,
+                    Value = item.value,
+                    Measures = GetListMeasure(item.measures)
+                };
                 nutrients.Add(nutrient);
             }
             return nutrients;
@@ -297,10 +299,12 @@ namespace Lamb_N_Lentil.UI.Models
             List<Measure> listMeasures = new List<Measure>();
             foreach (var item in measures)
             {
-                Measure m = new Measure();
-                m.Label = item.label;
-                m.Quantity = item.qty;
-                m.Value = item.value;
+                Measure m = new Measure
+                {
+                    Label = item.label,
+                    Quantity = item.qty,
+                    Value = item.value
+                };
                 listMeasures.Add(m);
             }
             return listMeasures;

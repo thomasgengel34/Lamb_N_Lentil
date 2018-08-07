@@ -7,20 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lamb_N_Lentil.UI", "Lamb_N_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lamb_N_Lentil.Tests", "Lamb_N_Lentil.Tests\Lamb_N_Lentil.Tests.csproj", "{C0648881-32D1-4A9D-98EB-A7A13E01858C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lamb_N_Lentil.Business", "Lamb_N_Lentil.Business\Lamb_N_Lentil.Business.csproj", "{1661B65D-683C-44BC-B4B7-3817D5B70B34}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lamb_N_Lentil.Domain", "Lamb_N_Lentil.Domain\Lamb_N_Lentil.Domain.csproj", "{9A81FA92-BF05-4EE6-A9E8-A774FE9CB062}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7F6C7EA8-09EB-441F-AD8C-A30698B92F76}"
-	ProjectSection(SolutionItems) = preProject
-		CaptureUnfrostedPopTart07122018.JPG = CaptureUnfrostedPopTart07122018.JPG
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample USDA Json Files", "Sample USDA Json Files", "{F814B7B2-5BD7-4EED-99DE-7619A50B88D6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reports", "Reports", "{4EF1B80D-A9D2-4CBE-ABAA-CB8BBBBDE416}"
 	ProjectSection(SolutionItems) = preProject
-		4518498.json = 4518498.json
 		CheddarCheeseFullReport01009.json = CheddarCheeseFullReport01009.json
 		FoodsYellowClingPeachesBrandedWithIngredients.json = FoodsYellowClingPeachesBrandedWithIngredients.json
 		GreatValueFatFreeBeans45066323.json = GreatValueFatFreeBeans45066323.json
@@ -32,6 +26,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reports", "Reports", "{4EF1
 		MinuteMaidLightLemonade.json = MinuteMaidLightLemonade.json
 		OrganicPepperSauceBasicReport45169419.json = OrganicPepperSauceBasicReport45169419.json
 		OrganicPepperSauceFullReport45169419.json = OrganicPepperSauceFullReport45169419.json
+		RavioiFiveCheese4518498.json = RavioiFiveCheese4518498.json
 		SampleUSDABrandedReport.json = SampleUSDABrandedReport.json
 		SampleUSDAStandardReport.json = SampleUSDAStandardReport.json
 		Spumoni45322307FullReport.json = Spumoni45322307FullReport.json
@@ -42,7 +37,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reports", "Reports", "{4EF1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Searches", "Searches", "{DE577B84-4D20-4112-847E-A181DFEB9006}"
 	ProjectSection(SolutionItems) = preProject
-		ButterSearchYieldingAList.json = ButterSearchYieldingAList.json
+		Butter.json = Butter.json
 		DicedPeaches.json = DicedPeaches.json
 	EndProjectSection
 EndProject
@@ -60,10 +55,6 @@ Global
 		{C0648881-32D1-4A9D-98EB-A7A13E01858C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0648881-32D1-4A9D-98EB-A7A13E01858C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0648881-32D1-4A9D-98EB-A7A13E01858C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1661B65D-683C-44BC-B4B7-3817D5B70B34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1661B65D-683C-44BC-B4B7-3817D5B70B34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1661B65D-683C-44BC-B4B7-3817D5B70B34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1661B65D-683C-44BC-B4B7-3817D5B70B34}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A81FA92-BF05-4EE6-A9E8-A774FE9CB062}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9A81FA92-BF05-4EE6-A9E8-A774FE9CB062}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A81FA92-BF05-4EE6-A9E8-A774FE9CB062}.Release|Any CPU.ActiveCfg = Release|Any CPU
