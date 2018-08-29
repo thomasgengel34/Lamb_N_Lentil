@@ -7,7 +7,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldRet
 {
     public class LiveUsdaSiteTestSetup
     {
-        private protected readonly IUsdaAsync usdaAsync = new UsdaAsync();
+        private protected readonly  IUsdaAsync usdaAsync = new UsdaAsync();
         private protected IngredientsController Controller;
         private protected string Ndbno { get; set; }
         private protected  _UsdaFoodReport report;

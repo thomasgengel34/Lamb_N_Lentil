@@ -8,14 +8,13 @@ using System.Threading.Tasks;
 namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDetailMethodShouldFor
 {
     [TestClass]
-    public class  BanquetBrownNServeTurkey45251384 : IngredientControllerDetailMethodShould
-    { 
-
+    public class BanquetBeefSausage45134443 : IngredientControllerDetailMethodShould
+    {  
         [TestInitialize]
         public new async Task Start()
         {
-            Controller = new IngredientsController(null, usdaAsync, usdaAsyncFoodReport);
-            searchText = "45251384";
+            Controller = new IngredientsController(null, usdaAsync);
+            searchText = "45134443";
             viewResult = await Controller.Details(searchText);
             model = (UsdaFoodReportViewModel)viewResult.Model;
         }
@@ -32,7 +31,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void HaveName()
         { 
-            var correct = "BANQUET, BROWN 'N SERVE, FULLY COOKED SAUSAGE LINKS, TURKEY, UPC: 031000184629";
+            var correct = "BANQUET Beef Sausage Links, UNPREPARED, GTIN: 00031000115029";
             var returned = model.Description;
             Assert.AreEqual(correct, returned);
         }
@@ -40,7 +39,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void HaveIngredients()
         { 
-            var correct = "TURKEY MECHANICALLY SEPARATED TURKEY, WATER, SOY PROTEIN CONCENTRATE, CONTAINS LESS THAN 2% OF: DEXTROSE, SALT, SUGAR, SPICES, CORN SYRUP, NATURAL FLAVOR, CITRIC ACID, BHA BHT.";
+            var correct = "Beef, Water, Soy Protein Concentrate, Contains 2% Or Less Of: Salt, Dextrose, Spices, Citric Acid, BHA, BHT.CONTAINS: SOY.";
             var returned = model.Ingredients;
             Assert.AreEqual(correct, returned);
         }
@@ -48,7 +47,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestMethod]
         public void HasCorrectNumberOfNutrients()
         {
-            var correct = 14;
+            var correct = 17;
             var returned = model.Nutrients.Count();
             Assert.AreEqual(correct, returned);
         } 

@@ -8,6 +8,8 @@ namespace Lamb_N_Lentil.UI.Models
 {
     public class UsdaFoodReportViewModel
     {
+        public string ReturnStatusTextToDisplay { get; set; }
+
         public string Ndbno { get; set; }
 
         [Display(Name = "Ingredient")]
@@ -151,7 +153,7 @@ namespace Lamb_N_Lentil.UI.Models
                 }
 
                 vm.Ingredients = food.ing.desc;
-                vm.UpdateDate= report.foods[0].food.ing.upd;
+                vm.UpdateDate = report.foods[0].food.ing.upd;
                 if (food.nutrients != null)
                 {
                     vm.ServingSize = food.nutrients.FirstOrDefault().measures.FirstOrDefault().label;
@@ -216,7 +218,7 @@ namespace Lamb_N_Lentil.UI.Models
                     vm.Iron = GetNutrientValue(vm, food, 303);
                     vm.IronUnit = GetNutrientUnit(vm, food, 303);
                     vm.IronPercentageDailyValue = Decimal.ToInt16(100 * vm.Iron / 18);
-                   
+
                     vm.Thiamine = GetNutrientValue(vm, food, 404);
                     vm.ThiamineUnit = GetNutrientUnit(vm, food, 404);
                     vm.ThiaminePercentageDailyValue = Decimal.ToInt16(100 * vm.Thiamine / 1.5M);
@@ -297,15 +299,25 @@ namespace Lamb_N_Lentil.UI.Models
         private static List<Measure> GetListMeasure(measures[] measures)
         {
             List<Measure> listMeasures = new List<Measure>();
-            foreach (var item in measures)
             {
-                Measure m = new Measure
+                foreach (var item in measures)
                 {
-                    Label = item.label,
-                    Quantity = item.qty,
-                    Value = item.value
-                };
-                listMeasures.Add(m);
+                    Measure m = new Measure();
+                    if (item == null)
+                    {
+                        m.Label = "";
+                        m.Quantity = 0M;
+                        m.Value = 0M;
+
+                    }
+                    else
+                    {
+                        m.Label = item.label;
+                        m.Quantity = item.qty;
+                        m.Value = item.value;
+                    }
+                    listMeasures.Add(m);
+                }
             }
             return listMeasures;
         }

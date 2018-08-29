@@ -11,7 +11,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodList
     [TestClass]
     public class IngredientControllerShowResultsMethodShould
     {
-        private protected readonly IUsdaAsync usdaAsync = new UsdaAsync();
+        private protected readonly  IUsdaAsync usdaAsync = new UsdaAsync();
         private protected readonly _UsdaListOfFoods usdaAsyncFoodList = new _UsdaListOfFoods();
         private protected IngredientsController Controller;
         private protected ViewResult viewResult;

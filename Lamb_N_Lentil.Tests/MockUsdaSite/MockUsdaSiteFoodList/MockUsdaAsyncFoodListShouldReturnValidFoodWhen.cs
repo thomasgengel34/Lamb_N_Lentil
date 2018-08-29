@@ -7,7 +7,7 @@ namespace Lamb_N_Lentil.Tests.MockUsdaAsyncSiteFoodList
     [TestClass]
     public class MockUsdaAsyncFoodListShouldReturnValidFoodWhen
     {
-        private readonly IUsdaAsync usdaAsync = new MockUsdaAsyncFoodList();
+        private readonly  UsdaAsync usdaAsync = new MockUsdaAsyncFoodList();
         private  IngredientsController Controller  { get; set; }
 
         public MockUsdaAsyncFoodListShouldReturnValidFoodWhen() => 

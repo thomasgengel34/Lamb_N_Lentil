@@ -39,7 +39,7 @@ namespace Lamb_N_Lentil.Tests.Controllers
         public void HaveAUsdaAsyncOfTypeUsdaAsync()
         {
             IngredientsController controller = new IngredientsController();
-            Assert.IsInstanceOfType(controller.usdaAsync, typeof(UsdaAsync));
+            Assert.IsInstanceOfType(controller.async, typeof(UsdaAsync));
         } 
     }
 }

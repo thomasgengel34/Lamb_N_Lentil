@@ -13,7 +13,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodList
     { 
 
         [TestInitialize]
-        public new async Task Start()
+        public   async Task Start()
         {
             Controller = new IngredientsController(null, usdaAsync);
             searchText = "45309980";

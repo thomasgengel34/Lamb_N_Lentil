@@ -47,13 +47,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UsdaInformation\IUsdaAsync.cs" />
     <Compile Include="UsdaInformation\Nutrient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UsdaInformation\Measure.cs" />
     <Compile Include="UsdaInformation\UsdaDataSource.cs" />
     <Compile Include="UsdaInformation\FoodReport\UsdaFoodReport.cs" />
     <Compile Include="UsdaInformation\UsdaAsync.cs" />
-    <Compile Include="UsdaInformation\IUsdaAync.cs" />
     <Compile Include="UsdaInformation\UsdaWebApiDataSource.cs" />
     <Compile Include="UsdaInformation\List\UsdaListofFoods.cs" />
   </ItemGroup>

@@ -13,7 +13,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.IngredientControllerDe
         [TestInitialize]
         public new async Task Start()
         {
-            Controller = new IngredientsController(null, usdaAsync, usdaAsyncFoodReport);
+            Controller = new IngredientsController(null, usdaAsync);
             searchText = "45056370";
             viewResult = await Controller.Details(searchText);
             model = (UsdaFoodReportViewModel)viewResult.Model;

@@ -1,12 +1,13 @@
 ﻿using Lamb_N_Lentil.Domain.UsdaInformation;
 using Lamb_N_Lentil.Domain.UsdaInformation.List;
+using Lamb_N_Lentil.Tests.MockUsdaAsyncSiteFoodList;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Lamb_N_Lentil.Tests.MockUsdaSiteFoodReport
 {
-    public class MockUsdaAsyncForFoodReport : IUsdaAsync
+    public class MockUsdaAsyncForFoodReport :  IUsdaAsync
     {
         protected UsdaFoodReport report;
 
@@ -63,7 +64,8 @@ namespace Lamb_N_Lentil.Tests.MockUsdaSiteFoodReport
                 nutrient_id = 301,
                 value = "25",
                 unit = "unit for Calcium",
-                measures = new measures[1]
+                measures = new measures[1],
+                
             };
             report.foods.First().food.nutrients[1].measures[0] = new measures
             {
@@ -407,7 +409,8 @@ namespace Lamb_N_Lentil.Tests.MockUsdaSiteFoodReport
         public int FetchedTotalFromSearch { get; set; }
         public string FetchedIngredientsInIngredient { get; set; }
 
-        async Task<UsdaFoodReport> IUsdaAsync.FetchUsdaFoodReport(string ndbno)
+
+       async   Task<UsdaFoodReport> IUsdaAsync.FetchUsdaFoodReport(string ndbno)  
         {
             await Task.Delay(0);
             report.foods.First().food.nutrients[0].measures[0].label = "I am an error";
@@ -552,9 +555,17 @@ namespace Lamb_N_Lentil.Tests.MockUsdaSiteFoodReport
             }
         }
 
-        Task<UsdaListofFoods> IUsdaAsync.FetchUsdaFoodList(string searchText)
+      async  Task<UsdaListofFoods> IUsdaAsync.FetchUsdaListOfFoods(string searchText, int defaultCount)  
         {
-            throw new NotImplementedException();
-        }
+            UsdaListofFoods usdaListofFoods = new UsdaListofFoods();
+            usdaListofFoods.list = new list();
+            usdaListofFoods.list.item = new item[]{
+                new item {ndbno="carb1"},
+                new item {ndbno="carb2"},
+                new item {ndbno="carb3"},
+                new item {ndbno="carb4"},
+                new item {ndbno="carb5"} };
+            return usdaListofFoods;
+        } 
     }
 }

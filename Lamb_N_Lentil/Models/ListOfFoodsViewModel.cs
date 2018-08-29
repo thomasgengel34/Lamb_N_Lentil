@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Lamb_N_Lentil.Domain.UsdaInformation;
@@ -14,8 +13,9 @@ namespace Lamb_N_Lentil.UI.Models
         public string Query { get; set; }
         public List<FoodItem> FoodItems { get; set; }
         public int Total { get; set; }
+        public string ReturnStatusTextToDisplay { get; set; }
 
-        public static async Task<ListOfFoodsViewModel> MapListOfSearchedFoodsToListOfFoods(UsdaListofFoods listOfFoods)
+        public static async Task<ListOfFoodsViewModel> MapListOfSearchedFoodsToListOfFoods(IUsdaAsync async, UsdaListofFoods listOfFoods)
         {
             ListOfFoodsViewModel vm = new ListOfFoodsViewModel();
             if (listOfFoods.list != null)
@@ -28,22 +28,53 @@ namespace Lamb_N_Lentil.UI.Models
 
                 foreach (var item in list.item)
                 {
-                           _UsdaFoodReport report = await new UsdaAsync().FetchUsdaFoodReport(item.ndbno);
+                    if (item != null)
+                    {
 
-                           FoodItem foodItem = new FoodItem()
-                           {
-                               Name = item.name,
-                                Ndbno = item.ndbno,
-                              Ingredients = report.foods.First().food.ing.desc,
-                                ServingSize = GetServingSize(report),
-                               MakerOrFoodGroup = FetchMakerOrFoodGroup(report),
-                            };
+                        _UsdaFoodReport report = await async.FetchUsdaFoodReport(item.ndbno);
 
-                          vm.FoodItems.Add(foodItem);
+                        FoodItem foodItem = new FoodItem()
+                        {
+                            Name = item.name,
+                            Ndbno = item.ndbno,
+                            Ingredients = report.foods.First().food.ing.desc,
+                            ServingSize = GetServingSize(report),
+                            MakerOrFoodGroup = FetchMakerOrFoodGroup(report),
+                            TotalCarbohydrate = FetchTotalCarbohydrate(report),
+                        };
+
+                        vm.FoodItems.Add(foodItem);
+                    }
                 }
             }
             return vm;
         }
+
+        private static decimal FetchTotalCarbohydrate(_UsdaFoodReport report)
+        {
+            decimal value = 0M;
+
+            if (report.foods.First().food.nutrients != null)
+            {
+                var totCarb = report.foods.First().food.nutrients.Where(i => i.nutrient_id == 205);
+                if (totCarb != null)
+                {
+                    if (totCarb.First() != null)
+                    {
+                        if (totCarb.First().measures != null)
+                        {
+                            if (totCarb.First().measures.FirstOrDefault() != null)
+                            {
+                                value = totCarb.First().measures.First().value;
+                            }
+                        }
+                    }
+
+                }
+            }
+            return value;
+        }
+
 
         private static string FetchMakerOrFoodGroup(_UsdaFoodReport report)
         {
@@ -53,15 +84,19 @@ namespace Lamb_N_Lentil.UI.Models
             {
                 return foodGroup;
             }
-            else return maker;
+            else
+            {
+                return maker;
+            }
         }
+
+        internal static Task<ListOfFoodsViewModel> MapListOfSearchedFoodsToListOfFoodsByLeastFiveCarbohydrates(UsdaListofFoods list) => throw new NotImplementedException();
 
         private static string GetServingSize(_UsdaFoodReport report)
         {
             string serving = "";
-            if (report.foods.First().food.nutrients.First().measures.Count()==0)
+            if (report.foods.First().food.nutrients.First().measures.Count() == 0)
             {
-                var foo = report.foods.First().food.nutrients.First().measures;
                 return serving;
             }
 
@@ -71,19 +106,8 @@ namespace Lamb_N_Lentil.UI.Models
             }
             return serving;
         }
-    }
 
-
-    public class FoodItem
-    {
-        public string Name { get; set; }
-        public string Ndbno { get; set; }
-        public string Ingredients { get; set; }
-
-        [Display(Name = "Serving Size")]
-        public string ServingSize { get; set; }
-
-        [Display(Name = "Maker Or Food Group")]
-        public string MakerOrFoodGroup { get; set; }
+       // Moving sorting functions  in domain and testing methods. 
+        public static void SortTotalCarbohydrates(ListOfFoodsViewModel vm) => vm.FoodItems = vm.FoodItems.OrderBy(t => t.TotalCarbohydrate).ToList();
     }
 }

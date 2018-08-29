@@ -9,8 +9,8 @@ namespace Lamb_N_Lentil.Tests.MockUsdaAsyncSiteFoodList
     [TestClass]
     public class MockUsdaAsyncFoodListTest  
     {
-        private readonly IUsdaAsync usdaAsync = new MockUsdaAsyncFoodList();
-        private IUsdaAsync usdaAsyncFoodReport = new MockUsdaAsyncFoodReportTest(); 
+        private readonly  UsdaAsync usdaAsync = new MockUsdaAsyncFoodList();
+        private MockUsdaAsyncFoodReportTest usdaAsyncFoodReport = new MockUsdaAsyncFoodReportTest(); 
 
         [TestMethod]
         public void ReduceStringLengthToWhatWillWorkOnUsdaWillNotThrowErrorWithEmptyString()
@@ -42,7 +42,7 @@ namespace Lamb_N_Lentil.Tests.MockUsdaAsyncSiteFoodList
         public async Task ReturnIngredientsInIngredientInFoodReport()
         {
             string testString = "ShouldReturnIngredients";
-            string correctIngredients = "ing-desc";
+            string correctIngredients = "description of ShouldReturnIngredients";
             UsdaFoodReport report = await usdaAsyncFoodReport.FetchUsdaFoodReport(testString);
                 string returnedIngredients = report.foods.First().food.ing.desc;
            Assert.AreEqual(correctIngredients, returnedIngredients);

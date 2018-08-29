@@ -1,6 +1,6 @@
 ﻿namespace Lamb_N_Lentil.Domain.UsdaInformation
 {
-    public class UsdaFoodReport : UsdaAsync, IUsdaAsync
+    public class UsdaFoodReport : UsdaAsync 
     {
         public foods[] foods { get; set; }
     }

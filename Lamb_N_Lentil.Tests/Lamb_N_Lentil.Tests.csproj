@@ -103,11 +103,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Common.cs" />
-    <Compile Include="Classes\IEntityShouldContain.cs" />
-    <Compile Include="Classes\EntityClassShould.cs" />
-    <Compile Include="Classes\IEntityAsyncControllerShould.cs" />
-    <Compile Include="Classes\IIngredientShouldContain.cs" />
     <Compile Include="Controllers\IngredientControllerActionMethodsShouldInclude.cs" />
     <Compile Include="Controllers\IngredientControllerActionMethodsShould.cs" />
     <Compile Include="Controllers\IngredientControllerDetailsActionMethodShould.cs" />
@@ -117,12 +112,16 @@
     <Compile Include="Controllers\EnteringTextInTheSearchBoxOnTheIngredientsIndexViewShouldReturn.cs" />
     <Compile Include="Controllers\IngredientControllerShould.cs" />
     <Compile Include="Infrastructure\UITypeShould.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientControllerShowResultslMethodShouldFoButter.cs" />
+    <Compile Include="LiveUsdaSite\LeastFiveCarbohydrates\IngredientControllerLeastfFiveCarbohydratesShouldForClarifiedGheeButter.cs" />
+    <Compile Include="LiveUsdaSite\LeastFiveCarbohydrates\IngredientControllerLeastfFiveCarbohydratesShouldForButter.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientControllerShowResultslMethodShouldForNoTextEntered.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientControllerShowResultslMethodShouldForButter.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientControllerShowResultslMethodShouldForDicedPeaches_________.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientControllerShowResultslMethodShouldForUnfindable.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientControllerShowResultslMethodShouldForUnfrostedCinammonPopTarts.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientControllerShowResultsMethodShould.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientControllerShowResultslMethodShouldForDicedPeaches45032698.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\EmptryStringReturnCorrectErrorMessag.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\AllensMediumGreenLimaBeans45205174.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\GreatValueFatFreeRefriedBeans45066323.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\GreatValuePorkAndBeansInTomatoSauce45056553.cs" />
@@ -137,7 +136,7 @@
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\GreatValuePremiumChunkChickenBreastInWater45123008.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\GreatValueWholeGreenBeans45258782.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\GreatValueOriginalSaltines45042577.cs" />
-    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\BanquetBrownNServeTurkey45251384.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\BanquetBeefSausage45134443.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\WholeKernelSweetCorn45312409.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\GreatValueChiliBeans45066324.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\DicedPeaches45032698.cs" />
@@ -163,16 +162,16 @@
     <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\Hominy20030.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\IngredientControllerDetailMethodShould.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\LiveUsdaSiteTestSetup.cs" />
-    <Compile Include="MockUsdaSiteFoodList\MockUsdaAsyncFoodList.cs" />
-    <Compile Include="MockUsdaSiteFoodReport\MockUsdaAsyncForFoodReports.cs" />
-    <Compile Include="MockUsdaSiteFoodList\MockUsdaAsyncFoodListTest.cs" />
-    <Compile Include="MockUsdaSiteFoodList\MockUsdaAsyncFoodListShouldReturnValidFoodWhen.cs" />
-    <Compile Include="MockUsdaSiteFoodReport\MockUsdaAsyncFoodReportTest.cs" />
+    <Compile Include="MockUsdaSite\MockUsdaSiteFoodList\MockUsdaAsyncFoodList.cs" />
+    <Compile Include="MockUsdaSite\MockUsdaSiteFoodReport\MockUsdaAsyncForFoodReports.cs" />
+    <Compile Include="MockUsdaSite\MockUsdaSiteFoodList\MockUsdaAsyncFoodListTest.cs" />
+    <Compile Include="MockUsdaSite\MockUsdaSiteFoodList\MockUsdaAsyncFoodListShouldReturnValidFoodWhen.cs" />
+    <Compile Include="MockUsdaSite\MockUsdaSiteFoodReport\MockUsdaAsyncFoodReportTest.cs" />
     <Compile Include="RouteTests.cs" />
-    <Compile Include="UsdaListOfFoods\IngredientsControllerShouldReturnListContaining.cs" />
-    <Compile Include="UsdaListOfFoods\LiveUsdaAsyncShouldReturnListContaining.cs" />
-    <Compile Include="ViewModelTest\UsdaFoodReportViewModel.cs" />
-    <Compile Include="ViewModelTest\IngredientDetailViewModelDisplayNamesShouldBeOn.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodList\IngredientsControllerShouldReturnListContainingOnSearchFor45244701.cs" />
+    <Compile Include="LiveUsdaSite\UsdaFoodList\LiveUsdaAsyncShouldReturnListContaining.cs" />
+    <Compile Include="MockUsdaSite\ViewModelTest\UsdaFoodReportViewModel.cs" />
+    <Compile Include="MockUsdaSite\ViewModelTest\IngredientDetailViewModelDisplayNamesShouldBeOn.cs" />
     <Compile Include="Views\BaseViewTests.cs" />
     <Compile Include="Views\HomeAboutViewShould .cs" />
     <Compile Include="Views\HomeIndexViewShould.cs" />

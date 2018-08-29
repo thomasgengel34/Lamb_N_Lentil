@@ -9,7 +9,8 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.UsdaFoodReport.LiveUsdaAsyncShouldRet
     {  
         [TestInitialize]
         public async Task Start()
-        {Ndbno = "45032698";
+        {
+           Ndbno = "45032698";
            report = await usdaAsync.FetchUsdaFoodReport(Ndbno);
         }
 

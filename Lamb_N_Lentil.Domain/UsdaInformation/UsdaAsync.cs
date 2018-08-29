@@ -1,19 +1,23 @@
-﻿using Lamb_N_Lentil.Domain.UsdaInformation.List;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using Lamb_N_Lentil.Domain.UsdaInformation.List;
 
 namespace Lamb_N_Lentil.Domain.UsdaInformation
 {
     public class UsdaAsync : IUsdaAsync
     {
-        static readonly string key = "sFtfcrVdSOKA4ip3Z1MlylQmdj5Uw3JoIIWlbeQm";
-        public int FetchedTotalFromSearch { get; set; }
-        public string FetchedIngredientsInIngredient { get; set; }
-          
+        private static readonly string key = "sFtfcrVdSOKA4ip3Z1MlylQmdj5Uw3JoIIWlbeQm";
+        public static int FetchedTotalFromSearch { get; set; } = 0;
+        public static string FetchedIngredientsInIngredient { get; set; } = "";
 
-       public static string ReduceStringLengthToWhatWillWorkOnUSDA(string searchString = "")
+        //private  IUsdaAsync usdaAsync = new UsdaAsync();
+
+
+
+        public static string ReduceStringLengthToWhatWillWorkOnUSDA(string searchString = "")
         {
             const int MaxStringLengthThatWillWork = 43;
             searchString = searchString ?? "";
@@ -26,7 +30,49 @@ namespace Lamb_N_Lentil.Domain.UsdaInformation
         }
 
 
-        public async Task<UsdaFoodReport> FetchUsdaFoodReport(string ndbno)
+
+
+        async Task<UsdaListofFoods> IUsdaAsync.FetchUsdaListOfFoods(string searchText, int defaultCount)
+        {
+            HttpClient client = new HttpClient();
+            string http = " https://api.nal.usda.gov/ndb/search?format=json&q=";
+
+
+            string http2 = "&max=" + defaultCount + "&offset=0&api_key=";
+
+            string foodListUrl = string.Concat(http, searchText, http2, key);
+
+            client.BaseAddress = new Uri(foodListUrl);
+
+            client.BaseAddress = new Uri(foodListUrl);
+            UsdaListofFoods usdaList = null;
+
+            HttpResponseMessage response = await client.GetAsync(foodListUrl);
+            if (response.IsSuccessStatusCode)
+            {
+                usdaList = await response.Content.ReadAsAsync<UsdaListofFoods>();
+            }
+            return usdaList;
+        }
+         
+
+        public async Task<decimal> GetTotalCarbs(item item)
+        {
+            IUsdaAsync foo = new UsdaAsync();
+            UsdaFoodReport report = await foo.FetchUsdaFoodReport(item.ndbno);
+            var totalcarb = 0.0M;
+            if (report.foods.FirstOrDefault().food.nutrients.Where(i => i.nutrient_id == 205).FirstOrDefault().value != null)
+            {
+                totalcarb = Convert.ToDecimal(report.foods.FirstOrDefault().food.nutrients.Where(i => i.nutrient_id == 205).FirstOrDefault().value);
+            }
+            else
+            {
+                totalcarb = report.foods.FirstOrDefault().food.nutrients.Where(i => i.nutrient_id == 205).FirstOrDefault().measures.FirstOrDefault().value;
+            }
+            return totalcarb;
+        }
+
+        async Task<UsdaFoodReport> IUsdaAsync.FetchUsdaFoodReport(string ndbno)
         {
             HttpClient client = new HttpClient();
 
@@ -58,32 +104,8 @@ namespace Lamb_N_Lentil.Domain.UsdaInformation
             else if (usdaFoodReport != null && usdaFoodReport.foods != null && usdaFoodReport.foods.First().food != null && usdaFoodReport.foods.First().food != null && usdaFoodReport.foods.First().food.ing != null)
             {
                 usdaFoodReport.foods.First().food.ing.desc = FetchedIngredientsInIngredient;
-            } 
+            }
             return usdaFoodReport;
         }
-
-        public async Task<UsdaListofFoods> FetchUsdaFoodList(string searchText)
-        {
-            HttpClient client = new HttpClient();
-            string http = " https://api.nal.usda.gov/ndb/search?format=json&q=";
-
-
-            string http2="&max=50&offset=0&api_key=";
-           
-            string foodListUrl = String.Concat(http,searchText,http2,key);
-
-            client.BaseAddress = new Uri(foodListUrl);
-
-            client.BaseAddress = new Uri(foodListUrl);
-            UsdaListofFoods usdaList = null;
-
-            HttpResponseMessage response = await client.GetAsync(foodListUrl);
-            if (response.IsSuccessStatusCode)
-            {
-                usdaList = await response.Content.ReadAsAsync<UsdaListofFoods>();
-            }
-
-            return usdaList;
-        }
-    } 
+    }
 }

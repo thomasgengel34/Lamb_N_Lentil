@@ -1,14 +1,11 @@
-﻿using Lamb_N_Lentil.Domain;
-using Lamb_N_Lentil.Tests.Classes;
-using Lamb_N_Lentil.UI.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using System.Reflection;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lamb_N_Lentil.Tests.ViewModelTest
 {
     [TestClass]
-    public class UsdaFoodReportViewModel : Common
+    public class UsdaFoodReportViewModel  
     { 
         Type type;
         PropertyInfo pInfo;

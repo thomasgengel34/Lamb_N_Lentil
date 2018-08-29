@@ -6,19 +6,18 @@ namespace Lamb_N_Lentil.Tests.Content
 {
     [TestClass]
     public class SiteCssFileShould : BaseViewTests
-    { 
-        static string testFileContents = @"html {
-    width: 100%;
-    margin-left: 0;
-}
-
-body {
-    width: 100%;
-    margin-left: 0;
+    {
+        static string testFileContents = @"html, body, h1, h2, h3, h4, h5, h6, table {
     font-family: 'Lucida Handwriting';
     color: green;
-    background: linear-gradient(90deg,rgba(250,207,78,0) 12%, transparent 0, transparent 99%, #dca 0);
+    background-color: lightgoldenrodyellow;
 }
+
+a {
+    font-family: 'Lucida Handwriting';
+    color: green;
+}
+
 
 #HomeAbout, #IngredientsIndex, .IngredientsDetails {
     padding-top: 50px;
@@ -29,48 +28,43 @@ body {
     margin-bottom: 0;
     min-height: 80vh;
     width: 90%;
-    padding-left:5%;
+    padding-left: 5%;
 }
 
 #HomeIndex {
-    background-color: lightgoldenrodyellow;
     width: 100%;
     height: 100%;
-    margin: 0;
     padding: 0;
     background-image: none;
 }
 
     #HomeIndex h1 {
         padding-top: 250px;
-        background-color: lightgoldenrodyellow;
-        margin-left: 0;
         font-size: 1200%;
         padding-bottom: 25%;
-        margin-left: -9%;
         padding-left: 10%;
     }
 
-    #HomeAbout li{
-        font-size:125%;
-    }
+#HomeAbout li {
+    font-size: 125%;
+}
 
 #IngredientsIndex {
-    min-height: inherit; 
+    min-height: inherit;
 }
 
     #IngredientsIndex h1, #IngredientsDetails h1 {
         padding-top: -10%;
     }
 
-    p{
-        font-size:125%;
-    }
+p {
+    font-size: 125%;
+}
 
- p a{
-        color:blue;
-        font-weight:500;
-       text-decoration:underline;
+    p a {
+        color: blue;
+        font-weight: 500;
+        text-decoration: underline;
     }
 
 footer {
@@ -95,6 +89,7 @@ footer {
 .dl-horizontal dt {
     white-space: normal;
 }
+
 
 /* Set width on the form input elements since they're 100% wide by default */
 input,
@@ -123,15 +118,9 @@ textarea {
 }
 
 
-h1, h2, h3, h4, h5, h6, table, a {
-    font-family: 'Lucida Handwriting';
-    background: #ffd800;
-    background-color: rgba(250,207,78,0);
-    color: green;
-}
 
 h1 {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 a {
@@ -145,16 +134,16 @@ a {
     padding-left: 3em;
     padding-right: 3em;
 }
-
+/*
 .container.body-content {
-    padding-left: 6%;
+   padding-left: 6%;
     background-color: lightgoldenrodyellow;
     background-image: linear-gradient(90deg, transparent 79px, pink 79px, pink 80px, transparent 81px), linear-gradient(#eee .1em, transparent .4em);
     background-size: 100% 2.4em;
     min-height: 90vh;
     margin-left: 10%;
     margin-right: 5%;
-}
+}*/
 
 h1 {
     padding-top: 19px;
@@ -195,7 +184,7 @@ tr .leftpadding10 {
     max-width: 450px;
 }
 
-h2.no_results {
+.no_results {
     color: red;
 }
 
@@ -212,7 +201,6 @@ h2.no_results {
     font-family: Arial;
     color: black;
     width: 48%;
-    /*border: 0;*/
     margin: 0 5px 0 5px;
 }
 
@@ -243,7 +231,7 @@ h2.no_results {
         height: 10px;
         width: 100%;
         background-color: black;
-        margin-top: 0px;
+        margin-top: 0;
         padding-top: 0;
     }
 
@@ -277,13 +265,22 @@ h2.no_results {
         padding-left: 5%;
     }
 
-
     .NutritionLabel .right {
         display: block;
         float: right;
     }
 /* Nutrition Label - end*/
-";
+
+.roundedBorder{
+    border:solid green 1px;
+    border-radius:10px; 
+    box-shadow:10px 10px 10px;
+    padding:15px;
+    margin:15px;
+}";
+
+
+
 
 
 private static string filePath = @"C:\Dev\TGE\Lamb_N_Lentil\Lamb_N_Lentil\Content\Site.css";
