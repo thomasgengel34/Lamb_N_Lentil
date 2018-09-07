@@ -4,12 +4,12 @@ using Lamb_N_Lentil.Domain.UsdaInformation;
 using Lamb_N_Lentil.Tests.MockUsdaSiteFoodReport;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Lamb_N_Lentil.Tests.MockUsdaAsyncSiteFoodList
+namespace Lamb_N_Lentil.Tests.MockUsdaSite.MockUsdaSiteFoodList
 {   
     [TestClass]
     public class MockUsdaAsyncFoodListTest  
     {
-        private readonly  UsdaAsync usdaAsync = new MockUsdaAsyncFoodList();
+        private readonly  IUsdaAsync usdaAsync = new MockUsdaAsyncFoodList();
         private MockUsdaAsyncFoodReportTest usdaAsyncFoodReport = new MockUsdaAsyncFoodReportTest(); 
 
         [TestMethod]

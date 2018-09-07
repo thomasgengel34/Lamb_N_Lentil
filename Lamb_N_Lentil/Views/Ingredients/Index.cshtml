@@ -15,7 +15,7 @@
     <p>  <label>Enter text to search for ingredients:</label></p>
     <p>Searches in the USDA databases are limited to 43 characters. Sorry!</p>
     <div class="roundedBorder">
-        <h3>Search the Database</h3>
+        <h3>Search the Database - this will show a maximum of 50 results</h3>
         @using (Html.BeginForm("ShowResults", UIType.Ingredients.ToString(), new { Controller = UIType.Ingredients.ToString(), searchText = "searchText" }))
         {<div class="row">
                 <div class="col-sm-8">
@@ -29,15 +29,15 @@
         <h3>Search the Database For the Least Five Carbohydrates</h3>
         @using (Html.BeginForm("LeastFiveCarbohydrates", UIType.Ingredients.ToString(), new { Controller = UIType.Ingredients.ToString(), searchText = "searchTextLeastFiveCarb" }))
         {<div class="row">
-                <div class="col-sm-8">
-                    @Html.TextBox("searchTextLeastFiveCarb", "", new { @class = "ingredientTextBox", placeholder = "Write Your Query Here", maxlength = "43", length = "43" })
-                </div>
-                <div class="col-sm-4"><input id="LFCsubmitButton" type="submit" value="Search" /></div>
-            </div>
+    <div class="col-sm-8">
+        @Html.TextBox("searchTextLeastFiveCarb", "", new { @class = "ingredientTextBox", placeholder = "Write Your Query Here", maxlength = "43", length = "43" })
+    </div>
+    <div class="col-sm-4"><input id="LFCsubmitButton" type="submit" value="Search" /></div> 
+</div> 
         }
     </div>
     <div class="roundedBorder">
-        <h3>Results Shown: @ViewBag.TotalShown  - this will show a maximum of 50 results</h3>
+        <h3>Results Shown: @ViewBag.TotalShown  </h3>
         <h3>Results Found:  @Html.DisplayFor(m => m.Total) </h3>
 
         <table class="table table-bordered table-hover" id="IngredientsIndexTable">
@@ -53,13 +53,15 @@
             { 
                 foreach (FoodItem food in Model.FoodItems)
                 {
-                    <tr>
-
+                    <tr>      
                         <td>
-
                             <strong>@Html.ActionLink(food.Name, UIType.Details.ToString(), new { ndbno = food.Ndbno })</strong> <br />
                             <p><strong>@Html.DisplayNameFor(f => food.Ingredients)</strong></p>
                             <p>@Html.DisplayFor(f => food.Ingredients)</p>
+                            @if (ViewBag.CarbTrigger == true)
+                            {
+                               <p>@Html.DisplayNameFor(c => food.TotalCarbohydrate) : @Html.DisplayFor(c => food.TotalCarbohydrate)</p>
+                            } 
                         </td>
                         <td>
                             <strong>@Html.DisplayNameFor(f => food.ServingSize)</strong>  <br />
@@ -73,4 +75,4 @@
         </table>
     </div>
 </div>
-<script src="~/Scripts/ingredientIndex.js"></script>
+ <script src="~/Scripts/ingredientIndex.js"></script> 

@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.Web.Mvc;
-using Lamb_N_Lentil.Domain.UsdaInformation;
-using Lamb_N_Lentil.Tests.MockUsdaAsyncSiteFoodList;
+using Lamb_N_Lentil.Domain.UsdaInformation; 
 using Lamb_N_Lentil.Tests.MockUsdaSiteFoodReport;
 using Lamb_N_Lentil.UI.Controllers;
 using Lamb_N_Lentil.UI.Models;
@@ -10,10 +9,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Lamb_N_Lentil.Tests.Controllers
 {
-    /*    [TestClass]
+      [TestClass]
         public class IngredientControllerDetailsActionMethodTotalPercentageShould 
         {
-           private readonly IUsdaAsync asyncFoodList = new MockUsdaAsyncFoodList();
+       /*      private readonly IUsdaAsync asyncFoodList = new MockUsdaAsyncFoodList();
            private   readonly IUsdaAsync asyncFoodReport = new MockUsdaAsyncForFoodReport();
             private IngredientViewModel model;
             private ViewResult vr;
@@ -288,7 +287,6 @@ namespace Lamb_N_Lentil.Tests.Controllers
                 int correct = 100;
                 int returned = model.RiboflavinPercentageDailyValue;
                 Assert.AreEqual(correct, returned);
-            }
-        }
-      */
+            } */
+        } 
 }

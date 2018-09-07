@@ -162,6 +162,10 @@
     <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\Hominy20030.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\IngredientControllerDetailMethodShouldFor\IngredientControllerDetailMethodShould.cs" />
     <Compile Include="LiveUsdaSite\UsdaFoodReport\LiveUsdaAsyncShouldReturnValidFullFoodReportFor\LiveUsdaSiteTestSetup.cs" />
+    <Compile Include="MockUsdaSite\MockUsdaSiteFoodList\IngredientControllerLeastfFiveCarbohydratesShouldForMockedWithNoCarbs.cs" />
+    <Compile Include="MockUsdaSite\MockUsdaSiteFoodList\IngredientControllerLeastfFiveCarbohydratesShouldForMockedPizza.cs" />
+    <Compile Include="MockUsdaSite\MockUsdaSiteFoodList\IngredientControllerLeastfFiveCarbohydratesShouldForMockedEgg.cs" />
+    <Compile Include="MockUsdaSite\MockUsdaSiteFoodList\IngredientControllerLeastfFiveCarbohydratesShouldForMockedButter.cs" />
     <Compile Include="MockUsdaSite\MockUsdaSiteFoodList\MockUsdaAsyncFoodList.cs" />
     <Compile Include="MockUsdaSite\MockUsdaSiteFoodReport\MockUsdaAsyncForFoodReports.cs" />
     <Compile Include="MockUsdaSite\MockUsdaSiteFoodList\MockUsdaAsyncFoodListTest.cs" />

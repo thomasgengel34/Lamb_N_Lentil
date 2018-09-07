@@ -24,7 +24,7 @@ namespace Lamb_N_Lentil.Tests.LiveUsdaSite.LeastFiveCarbohydrates
         {
             Controller = new IngredientsController(null, usdaAsync);
             searchText = "45365538";
-            viewResult = (ViewResult)( await Controller.LeastFiveCarbohydrates(usdaAsync, searchText ));
+            viewResult = (ViewResult)( await Controller.LeastFiveCarbohydrates(searchText ));
             model = (ListOfFoodsViewModel)viewResult.Model;
             return model;
         }
